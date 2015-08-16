@@ -1,0 +1,14 @@
+{
+  "name": "family",
+  "version": "1.0",
+  "dependencies": {
+    "jquery": "latest",
+    "jquery-ui": "latest",
+    "jquery.validation": "latest",
+    "timeago": "latest",
+    "echojs": "~1.6.0",
+    "superfish": "latest",
+    "lightbox2": "latest",
+    "normalize.css": "latest"
+  }
+}

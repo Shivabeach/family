@@ -6,15 +6,14 @@ class Includes extends CI_Controller {
 	public function complete() //this just tells me who I have already entered in the family insert page
 	{
 		$data = array();
-		$this->db->select("relative, family, male, female");
-		$this->db->order_by("id", "desc");
-		$query = $this->db->get("primary");
+		$this->db->select("relative")->from("primary")->order_by("id","desc");
+		$query = $this->db->get();
 		if ($query->result()) {
-			$data['done'] = $query->result();
+			$data['display'] = $query->result();
+		}else {
+			echo "no return";
 		}
-		$data['statement'] = "Results to Date";
-		$this->load->view('include/done', $data);
-
+		//$this->load->view('include/done', $data);
 	}
 
 }

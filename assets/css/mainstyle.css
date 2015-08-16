@@ -1,0 +1,25 @@
+@import url("../../bower_components/normalize.css/normalize.min.css");
+@import url("elements-dist.css");
+@import url("layout-dist.css");
+@import url("links-dist.css");
+@import url("typo-dist.css");
+@import url("admin-dist.css");
+@import url("grid-dist.css");
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-size: 100%;
+  line-height: 1.125em;
+  /* 16x1.125=18px */
+  background-color: #3e3e3e;
+}
+::selection {
+  background-color: #E13300;
+  color: white;
+}
+::-moz-selection {
+  background-color: #E13300;
+  color: white;
+}

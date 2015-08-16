@@ -1,0 +1,96 @@
+@import (less) url("colors.less");
+.highlight {
+	background-color: #133a7b; /*top colour*/
+	background-image: linear-gradient(to bottom, #133a7b, #3F51B5);
+}
+	.top {
+		height: 5em;
+		color: yellow;
+		line-height: 2;
+		h1 {
+			text-align: center;
+			font-family: hallo_sansblack;
+			letter-spacing: 2px;
+			.highlight;
+			margin: 0;
+		}
+	}
+	.section-header {
+		height: 2em;
+		margin: 0 .5em;
+		color: @backdrop;
+		text-shadow:1px 2px 3px @accent;
+		letter-spacing: 2px
+	}
+	.foot-header {
+		height: 2rem;
+		width: 100%;
+	}
+	.aside-header {
+		width: 100%;
+		height: 1rem;
+	}
+main {
+	width: 80%;
+	float: left;
+	background: @secondary;
+	height: auto;
+	hr {
+		display: block;
+	    margin-top: 0.5em;
+	    margin-bottom: 0.5em;
+	    margin-left: 20%;
+	    margin-right: 20%;
+	    border-style: inset;
+	    border-width: 1px;
+	}
+}
+
+footer {
+	height: 200px;
+	clear:both;
+	float: left;
+	width: 100%;
+	.foot-container {
+		margin: 0 1rem;
+		p {
+			font-family: arial;
+			font-size: .75em;
+			margin: 1em;
+		}
+	}
+}
+aside {
+	width: 25%;
+	height: auto;
+}
+article {
+	width: 100%;
+	height: auto;
+	color: @primetext;
+}
+section {
+	padding: 1em 0;
+	p {
+		color: @primetext;
+		margin: 2px 1.5em;
+		line-height: 1.5;
+	}
+}
+form {
+	padding-left: 5px;
+	input,select {
+		color: darken(@backdrop, 30%);
+	}
+	input:focus {
+		outline: 4px solid Chocolate;
+		text-indent: 5px;
+		color: darken(@backdrop, 30%);
+	}
+}
+nav ul {
+	list-style-type: none;
+	li a {
+		color: LightBlue;
+	}
+}

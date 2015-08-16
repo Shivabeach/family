@@ -1,0 +1,80 @@
+h1 {
+  font-size: 2rem;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: .75em 0;
+  line-height: 1.5;
+}
+h3 {
+  font-size: 1.17rem;
+  margin: .83em 0;
+  padding-top: 4px;
+}
+h4 {
+  font-size: 1rem;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83rem;
+  margin: 1.5em 0;
+}
+h6 {
+  font-size: 0.75rem;
+  margin: 1.67em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}

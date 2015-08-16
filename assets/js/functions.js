@@ -23,7 +23,7 @@ $(function () {
         });
         return false;
     });
-}); 
+});
 $(function() {
     "use strict";
     $("#form1").submit(function() {

@@ -12,7 +12,10 @@ class Forms extends CI_Controller {
 			'relative'      => htmlspecialchars($this->input->post('relative')),
 			'level'         => htmlspecialchars($this->input->post('level')),
 			'year'          => htmlspecialchars($this->input->post('year')),
-			'branch2'		=> htmlspecialchars($this->input->post('branch2'))
+			'branch2'       => htmlspecialchars($this->input->post('branch2')),
+			'country'       => htmlspecialchars($this->input->post('country')),
+			'comment'       => htmlspecialchars($this->input->post('comment'))
+
 		);
 		$this->form_validation->set_rules('family', 'Family', 'required|trim');
 		$this->form_validation->set_rules('male', 'Male', 'required|trim');
@@ -22,6 +25,8 @@ class Forms extends CI_Controller {
 		$this->form_validation->set_rules('level', 'Level', 'required|trim|numeric');
 		$this->form_validation->set_rules('year', 'Year', 'required|trim|numeric');
 		$this->form_validation->set_rules('branch2', 'Branch 2', 'required|trim');
+		$this->form_validation->set_rules('country', 'Country', 'required|trim');
+		$this->form_validation->set_rules('comment', 'Comment', 'trim');
 		if( $this->form_validation->run() == TRUE ) {
 			$this->db->insert('primary', $data);
 			echo "grand shit";

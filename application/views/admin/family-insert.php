@@ -91,6 +91,25 @@
 					];?>
 					<?php echo form_input($attr9);?>
 				</p>
+				<p>
+					<label for="country">Country of birth</label>
+					<?php
+					$attr11 = [
+						'name'      => 'country',
+						'maxlength' => '100',
+						'type'      => 'text',
+						'id' => 'country'
+					];?>
+					<?php echo form_input($attr11);?>
+				</p>
+				<p>
+					<label for="comment">Comment</label>
+					<?php
+					$attr12 = [
+						'name' => 'comment',
+						'id'   => 'comment'
+					];?>
+					<?php echo form_textarea($attr12);?>
 				<?php echo form_submit('submit', 'Submit');
 				echo form_reset('reset', 'Reset');
 				echo form_close();?>

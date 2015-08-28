@@ -2,7 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pages extends CI_Controller {
-
+/**
+ * gets data for the main page
+ * @return string [description]
+ */
 	public function index()
 	{
 		$this->load->database();

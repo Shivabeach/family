@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Get_data extends CI_Model {
 /**
  * [getData description]
- * @param  string $parent [forms controller]
+ * @param  string $parent [pages controller]
  * @return int|string         [feeds the main family pages, Bostick and VanHorn]
  */
 	function getData($parent)

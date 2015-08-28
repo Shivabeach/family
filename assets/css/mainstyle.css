@@ -15,6 +15,10 @@ body {
   /* 16x1.125=18px */
   background-color: #3e3e3e;
 }
+::-moz-selection {
+  background-color: #E13300;
+  color: white;
+}
 ::selection {
   background-color: #E13300;
   color: white;

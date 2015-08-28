@@ -13,12 +13,21 @@ article {
 }
 .leftbox {
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 20px;
 }
 .rightbox {
   width: 30%;
   float: left;
+}
+.rightbox li {
+  background-color: #c5cae9;
+  color: #000000;
+  text-indent: 1em;
+  list-style-type: none;
+  border-radius: 5px;
+}
+.rightbox ul {
+  padding-right: 20px;
+  border-radius: 5px;
 }

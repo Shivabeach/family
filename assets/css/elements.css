@@ -1,10 +1,11 @@
 .highlight {
   background-color: #133a7b;
   /*top colour*/
+  background-image: -webkit-linear-gradient(top, #133a7b, #3f51b5);
   background-image: linear-gradient(to bottom, #133a7b, #3f51b5);
 }
 .top {
-  height: 5em;
+  height: 15em;
   color: yellow;
   line-height: 2;
 }
@@ -14,6 +15,7 @@
   letter-spacing: 2px;
   background-color: #133a7b;
   /*top colour*/
+  background-image: -webkit-linear-gradient(top, #133a7b, #3f51b5);
   background-image: linear-gradient(to bottom, #133a7b, #3f51b5);
   margin: 0;
 }
@@ -90,9 +92,28 @@ form input:focus {
   text-indent: 5px;
   color: #000000;
 }
+form textarea {
+  outline: 4px solid Chocolate;
+  text-indent: 5px;
+  color: #000000;
+}
 nav ul {
   list-style-type: none;
+  padding: 0;
+  margin: 5em 0;
+  width: 100%;
 }
 nav ul li a {
   color: LightBlue;
+  padding-left: 1em;
+}
+li.main-nav {
+  height: 2.5em;
+  -webkit-transition: all .25s;
+          transition: all .25s;
+  background-color: #448aff;
+  line-height: 2;
+}
+li.main-nav:hover {
+  background-color: indigo;
 }

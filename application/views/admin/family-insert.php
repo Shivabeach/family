@@ -92,7 +92,7 @@
 					<?php echo form_input($attr9);?>
 				</p>
 				<p>
-					<label for="country">Country of birth</label>
+					<label for="country">Country of Birth</label>
 					<?php
 					$attr11 = [
 						'name'      => 'country',
@@ -110,6 +110,7 @@
 						'id'   => 'comment'
 					];?>
 					<?php echo form_textarea($attr12);?>
+					</p>
 				<?php echo form_submit('submit', 'Submit');
 				echo form_reset('reset', 'Reset');
 				echo form_close();?>
@@ -119,6 +120,7 @@
 	<div class="rightbox">
 		<h3 class="display">We should see results here</h3>
 		<div id="display"></div>
+		<h3 class="highlite">List of completed Connections</h3>
 		<?php $this->load->view("include/done");?>
 		
 	</div>

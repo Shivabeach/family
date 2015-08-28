@@ -6,3 +6,13 @@ a:hover {
 a:link {
   color: #ca82ff;
 }
+.vanhorn-link,
+.bostick-link {
+  font-size: 2rem;
+}
+.bostick-link {
+  color: #ffffff !important;
+}
+.vanhorn-link {
+  color: #000000 !important;
+}

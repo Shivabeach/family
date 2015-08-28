@@ -15,8 +15,12 @@ class Includes extends CI_Controller {
 		}
 		//$this->load->view('include/done', $data);
 	}
+	public function country()
+	{
+		"SELECT COUNT(DISTINCT country) AS many";
+		$this->db->select("country");
+	}
 
 }
-
 /* End of file includes.php */
 /* Location: ./application/controllers/includes.php */

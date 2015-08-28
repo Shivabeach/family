@@ -21,20 +21,21 @@ class Forms extends CI_Controller {
 		$this->form_validation->set_rules('male', 'Male', 'required|trim');
 		$this->form_validation->set_rules('female', 'Female', 'required|trim');
 		$this->form_validation->set_rules('relation-ship', 'Relationship', 'required|trim');
-		$this->form_validation->set_rules('relative', 'Relative', 'required|trim');
+		$this->form_validation->set_rules('relative', 'Relative', 'required|trim|is_unique(primary.relative)');
 		$this->form_validation->set_rules('level', 'Level', 'required|trim|numeric');
 		$this->form_validation->set_rules('year', 'Year', 'required|trim|numeric');
 		$this->form_validation->set_rules('branch2', 'Branch 2', 'required|trim');
 		$this->form_validation->set_rules('country', 'Country', 'required|trim');
 		$this->form_validation->set_rules('comment', 'Comment', 'trim');
-		if( $this->form_validation->run() == TRUE ) {
-			$this->db->insert('primary', $data);
-			echo "grand shit";
+		if( $this->form_validation->run() == FALSE) {
+			echo validation_errors();
 		}else
 		{
-			echo validation_errors();
+			$this->db->insert('primary', $data);
+			echo "grand shit";
 		}
 	}
+
 		
 	 //end form1 insert family members
 	/**

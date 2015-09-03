@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Includes extends CI_Controller {
+	$this->load->database();
 
 	public function complete() //this just tells me who I have already entered in the family insert page
 	{
@@ -15,10 +16,18 @@ class Includes extends CI_Controller {
 		}
 		//$this->load->view('include/done', $data);
 	}
-	public function country()
+	public function get_country()
 	{
-		"SELECT COUNT(DISTINCT country) AS many";
-		$this->db->select("country");
+		$this->db->distinct("country");
+		$query = $this->db->get("primary");
+		if ($query->result())
+		{
+			$data['countrys'] = $query->result();
+		}
+		$this->load->view("include/nav_country", $data);
+
+
+
 	}
 
 }

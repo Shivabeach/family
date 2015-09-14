@@ -3,17 +3,39 @@
 	background-color: #133a7b; /*top colour*/
 	background-image: linear-gradient(to bottom, #133a7b, #3F51B5);
 }
-	.top {
-		height: 15em;
+	.top {//header
+		height: 250px;
+		.highlight;
 		color: yellow;
-		line-height: 2;
-		h1 {
-			text-align: center;
+		text-align: center;
+
+	}
+	.align{//header
+		padding: 0;
+		margin: 0;
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		     -o-transform: translateY(-50%);
+		        transform: translateY(-50%);
+		h1 {//header
 			font-family: hallo_sansblack;
 			letter-spacing: 2px;
-			.highlight;
-			margin: 0;
 		}
+	}
+	li.main-country {
+		list-style-type: none;
+		padding: 0;
+		margin: 1em;
+		width: 100%;
+		color: LightBlue;
+	}
+	.accent {
+		background-color: @accent;
+		padding-top: 1em;
+		padding-bottom: 1em;
 	}
 	.section-header {
 		height: 2em;

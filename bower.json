@@ -11,5 +11,20 @@
     "lightbox2": "latest",
     "normalize.css": "latest",
     "bigfoot": "latest"
-  }
+  },
+  "homepage": "https://github.com/Shivabeach/family",
+  "authors": [
+    "Shivabeach <mrwilson1@comcast.net>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

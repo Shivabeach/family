@@ -18,7 +18,7 @@ class Includes extends CI_Controller {
 	}
 	public function get_country()
 	{
-		$this->db->distinct("country");
+		$this->db->select("country");
 		$query = $this->db->get("primary");
 		if ($query->result())
 		{

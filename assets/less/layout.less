@@ -37,26 +37,31 @@ nav {
 .vanhorn {
 	background-color: @vanhorn;
 	color: contrast(@vanhorn);
-	height: 200px;
+	height: 300px;
 	p {
 		line-height: 1.5;
+		color: contrast(@vanhorn);
 	}
 }
 .bostick {
 	background-color: @bostick;
 	color: contrast(@bostick);
-	height: 200px;
+	height: 300px;
 	p {
 		line-height: 1.5;
+		color: inherit;
 	}
 }
 article.centered {
-	margin: 8px auto;
-	width: 96%;
-	height: auto;
+	text-align: center;
+	
 	border: 1px solid red;
-	p {
-		text-align: left;
-		margin: 5px;
-	}
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	
 }

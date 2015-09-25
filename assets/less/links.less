@@ -3,18 +3,17 @@
 a:active,
 a:hover {
   outline: 1px;
-  color: red; 
+  color: lighten(@backdrop, 50%);
 }
 a:link {
-	color: lighten(@backdrop, 50%);
+	color: darken(@backdrop, 50%);
 }
 
 .vanhorn-link,.bostick-link {
 	font-size: 2rem;
 }
 .bostick-link {
-	color: contrast(@bostick)!important;
-	
+	color: contrast(@bostick)!important;	
 }
 .vanhorn-link {
 	color: contrast(@vanhorn)!important;

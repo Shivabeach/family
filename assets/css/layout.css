@@ -7,6 +7,7 @@
 nav {
   width: 20%;
   float: left;
+  background-color: #448aff;
 }
 nav p {
   margin: 1em;
@@ -53,10 +54,15 @@ nav p {
 }
 article.centered {
   text-align: center;
-  border: 1px solid red;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+      transform: translateY(-50%);
+}
+.hidden {
+  display: none;
+}
+h4.ten {
+  margin-left: 10px;
 }

@@ -2,15 +2,16 @@
   "name": "family",
   "version": "1.0",
   "dependencies": {
+    "bigfoot": "latest",
+    "echojs": "~1.6.0",
     "jquery": "latest",
     "jquery-ui": "latest",
     "jquery.validation": "latest",
-    "timeago": "latest",
-    "echojs": "~1.6.0",
-    "superfish": "latest",
     "lightbox2": "latest",
     "normalize.css": "latest",
-    "bigfoot": "latest"
+    "sanitize-css": "~1.1.0",
+    "superfish": "latest",
+    "timeago": "latest"
   },
   "homepage": "https://github.com/Shivabeach/family",
   "authors": [

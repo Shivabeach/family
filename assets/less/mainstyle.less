@@ -1,4 +1,5 @@
 @import (less) url("colors.less");
+@import (css) url("../../bower_components/sanitize-css/dist/sanitize.css");
 @import (css) url("../../bower_components/normalize.css/normalize.min.css");
 @import (css) url("elements-dist.css");
 @import (css) url("layout-dist.css");
@@ -14,7 +15,7 @@ html {
 body {
 	font-size:100%;
 	line-height:1.125em; /* 16x1.125=18px */
-	background-color: #3e3e3e;
+	background-color: @marsala;
 }
 ::selection { background-color: #E13300; color: white; }
 ::-moz-selection { background-color: #E13300; color: white; }

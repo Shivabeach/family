@@ -1,3 +1,4 @@
+@import url("../../bower_components/sanitize-css/dist/sanitize.css");
 @import url("../../bower_components/normalize.css/normalize.min.css");
 @import url("elements-dist.css");
 @import url("layout-dist.css");
@@ -13,7 +14,7 @@ body {
   font-size: 100%;
   line-height: 1.125em;
   /* 16x1.125=18px */
-  background-color: #3e3e3e;
+  background-color: #955251;
 }
 ::-moz-selection {
   background-color: #E13300;

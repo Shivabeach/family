@@ -1,10 +1,10 @@
 a:active,
 a:hover {
   outline: 1px;
-  color: red;
+  color: #ca82ff;
 }
 a:link {
-  color: #ca82ff;
+  color: #000000;
 }
 .vanhorn-link,
 .bostick-link {

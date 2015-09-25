@@ -13,10 +13,5 @@
                 <li class="main-nav">
                 <?php echo anchor('pages/fam', 'Family Insert'); ?></li>
             </ul>
-
-            <p>This is the nav
-            section</p><?php $this->load->view("include/nav_country");?>
-        </nav>
-    </div>
-<?php $this->load->view("include/nav_country");?>
-</nav>
+            <?php $this->load->view("include/nav_country");?>
+       </nav>

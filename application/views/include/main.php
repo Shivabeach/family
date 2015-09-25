@@ -6,7 +6,7 @@
             </div>
         </header>
 
-        <div class="row">
+        <div class="row"><h3 class="hidden">VanHorn Family</h3>
             <div class="grid-2 vanhorn">
                 <article class="centered">
                     <h2><a class="vanhorn-link" href="#">VanHorns</a></h2>

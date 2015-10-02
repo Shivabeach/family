@@ -104,6 +104,7 @@
 				</p>
 				<p>
 					<label for="comment">Comment</label>
+					<br>
 					<?php
 					$attr12 = [
 						'name' => 'comment',

@@ -25,6 +25,12 @@ class Pages extends CI_Controller {
 		$this->load->view('admin/family-insert', $data);
 	}
 
+	public function van() 
+	{
+		$data['title'] = "VanHorn page";
+		$this->load->view("pages/van");
+	}
+
 }
 
 /* End of file pages.php */

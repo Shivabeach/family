@@ -5,7 +5,8 @@
                 <?php echo anchor('pages/fam', 'Family Insert'); ?></li>
 
                 <li class="main-nav">
-                <?php echo anchor('pages/fam', 'VanHorns'); ?></li>
+                <?php echo anchor('pages/van', 'VanHorns'); ?>
+                </li>
 
                 <li class="main-nav">
                 <?php echo anchor('pages/fam', 'Bosticks'); ?></li>

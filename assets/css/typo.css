@@ -1,3 +1,4 @@
+
 h1 {
   font-size: 2rem;
   margin: 0.67em 0;
@@ -24,6 +25,9 @@ h6 {
   font-size: 0.75rem;
   margin: 1.67em 0;
 }
+p {
+  margin: 5px 0;
+}
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -47,6 +51,10 @@ sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
+  border: 1px solid red;
+  border-radius: 50%;
+  background-color: .blend;
+  padding: 5px;
 }
 sup {
   top: -0.5em;

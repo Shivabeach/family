@@ -9,6 +9,7 @@ class Includes extends CI_Controller {
 		$data = array();
 		$this->db->select("relative")->from("primary")->order_by("id","desc");
 		$query = $this->db->get();
+		$this->db->count_all_results();
 		if ($query->result()) {
 			$data['display'] = $query->result();
 		}else {

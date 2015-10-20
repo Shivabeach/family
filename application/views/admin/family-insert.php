@@ -9,7 +9,7 @@
 					<?php $attr1 = array(
 						'id' => "ajax"
 					);?>
-					<?php echo form_open('forms/form1', $attr1) ;?>
+					<?php echo form_open('/forms/form1', $attr1) ;?>
 					<p><label for="family">Family</label>
 					<?php
 						$attr2 = array(
@@ -51,10 +51,10 @@
 					<?php echo form_input($attr10);?>
 				</p>
 				<p>
-					<label for="relation-ship">Relationship</label>
+					<label for="relationship">Relationship</label>
 					<?php
 					$attr6 = array(
-						'name'      => 'relation-ship',
+						'name'      => 'relationship',
 						'maxlength' => '100',
 						'style'     => 'width:50%'
 					);?>

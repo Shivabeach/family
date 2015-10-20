@@ -5,8 +5,7 @@
   background: linear-gradient(to bottom, #133a7b, #3f51b5);
 }
 .top {
-  height: 200px;
-  color: yellow;
+  height: 150px;
   text-align: center;
 }
 .align {
@@ -19,8 +18,10 @@
   transform: translateY(-50%);
 }
 .align h1 {
-  font-family: hallo_sansblack;
-  letter-spacing: 2px;
+  color: yellow;
+  font-family: 'england_hand_dbregular';
+  letter-spacing: 1px;
+  font-size: 4rem;
 }
 li.main-country {
   list-style-type: none;
@@ -37,7 +38,7 @@ li.main-country {
   height: 2em;
   margin: 0 .5em;
   color: indigo;
-  text-shadow: 1px 2px 3px #448aff;
+  text-shadow: 1px 2px 3px #c5cae9;
   letter-spacing: 2px;
 }
 .foot-header {
@@ -91,7 +92,7 @@ section {
 }
 section p {
   color: #ffffff;
-  margin: 2px 1.5em;
+  margin: 12px 1.5em;
   line-height: 1.5;
 }
 /* --------------------------------
@@ -117,7 +118,9 @@ form textarea {
   color: #ffffff;
 }
 input[type='submit'] {
-  background-color: green;
+  background-image: -webkit-linear-gradient(0deg, #f39c12 25%, #e67e22 100%);
+  background-image: linear-gradient(90deg, #f39c12 25%, #e67e22 100%);
+  background-image: -ms-linear-gradient(left, #f39c12 25%, #e67e22 100%);
   border: 2px brown inset;
   margin: 5px;
   padding: 5px;

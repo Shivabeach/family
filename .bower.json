@@ -11,6 +11,8 @@
     "lightbox2": "latest",
     "normalize.css": "latest",
     "bigfoot": "latest",
-    "chocolat": "latest"
+    "chocolat": "latest",
+    "fontawesome": "latest",
+    "hover": "latest"    
   }
 }

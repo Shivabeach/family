@@ -1,6 +1,9 @@
 @import (less) url("colors.less");
 @import (css) url("typo-dist.css");
 @import (css) url("fonts-dist.css");
+@import (css) url("bower_components/hover/css/hover.css");
+@import (css) url("bower_components/font-awesome/css/font-awesome.css");
+
 html {
 	box-sizing: border-box;
 }
@@ -11,7 +14,7 @@ html {
 body, html {
 	margin: 0;
 	padding: 0;
-	background-color: #949494;
+	background-color: rgba(20,255,255, 0.3);
 	font-size: 16px;
 	font-family: georgia;
 	line-height: 1.5;
@@ -32,12 +35,21 @@ header {
 	}
 }
 
+.dnahead {
+	background-color: @dnahead;
+}
+.dnablock {
+	background-color: @dnablock;
+}
+
 aside.sidemenu {
 	width: 200px;
 	height: auto;
 	float: right;
 	text-align: left;
-	border: 2px solid #250000;
+	border-radius: 5px;
+	border: 1px solid gray;
+	background-color: @dnahead;
 	li {
 		padding-left: 20px;
 		margin: 5px;
@@ -66,15 +78,13 @@ aside.sidemenu {
 	flex-flow: row wrap;
 	max-width: 1200px;
 	margin: 0 auto;
-
 }
 
 .item {
-	justify-content: space-between;
 	min-width: 200px;
 	p {
 		font-size: 1em;
-		margin: 8px;
+		margin: 8px 20px;
 	}
 	li {
 		font-size: 1em;
@@ -98,9 +108,6 @@ aside.sidemenu {
 .flex-three {
 	background-color: #E8C6B6;
 	flex: 1;
-	ul {
-		list-style-type: square;
-	}
 }
 .flex-four {
 	flex-direction: column;
@@ -112,7 +119,26 @@ section>h1 {
 section article {
 	margin: 0 1em;
 }
+article {
+	border-radius: 5px;
+	border: 1px solid gray;
+	box-shadow: 1px 1px 1px gray;
+	li {
+		margin-left: 8px;
+	}
 
+}
+.main-page {
+		box-shadow: none !important;
+		border: none !important;
+	}
+section {
+	border-radius: 5px;
+}
+.border {
+	border-radius: 5px;
+	border: 1px solid gray;
+}
 // list
 ul {
 	list-style-type: none;
@@ -229,14 +255,7 @@ nav a.current {
 	background-image: linear-gradient(90deg, rgb(231, 76, 60) 25%, rgb(230, 126, 34) 100%);
 	background-image: -ms-linear-gradient(left, rgb(231, 76, 60) 25%, rgb(230, 126, 34) 100%);
 }
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-  border: 1px solid red;
-  border-radius: 50%;
-  .blend;
-  padding: 5px;
+
+.m20 {
+	margin-left: 2rem;
 }

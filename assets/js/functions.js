@@ -55,7 +55,7 @@ $(function() {
 //this is for putting names into a search for on the data.php page
 $(function () {
   "use strict";
-  $('dd').on('click', function () { //click on the li. CHANGE TO REFLECT NEW LI
+  $('li.tool').on('click', function () { //click on the li. CHANGE TO REFLECT NEW LI
     var content = $(this).text();//content is the text that you clicked on
  //PLACE THE TEXT INSIDE THE INPUT FIELD, YOU CAN CHANGE YOUR SELECTOR TO TARGET THE RIGHT INPUT
     $('input[name="name"]').val(content);
@@ -98,4 +98,9 @@ $(function () {
 $( function() {
     "use strict";
     $(".sf-menu").superfish();
-} );
+});
+
+$('a#top').click(function () {
+  $(document.body).animate({scrollTop: 0}, 800);
+  return false;
+});

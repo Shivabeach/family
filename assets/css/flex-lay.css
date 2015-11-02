@@ -1,5 +1,7 @@
 @import url("typo-dist.css");
 @import url("fonts-dist.css");
+@import url("bower_components/hover/css/hover.css");
+@import url("bower_components/font-awesome/css/font-awesome.css");
 html {
   box-sizing: border-box;
 }
@@ -12,7 +14,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: #949494;
+  background-color: rgba(20, 255, 255, 0.3);
   font-size: 16px;
   font-family: georgia;
   line-height: 1.5;
@@ -32,12 +34,20 @@ header h1 {
   margin: 0;
   color: Pantone #de007d;
 }
+.dnahead {
+  background-color: #ffdcbb;
+}
+.dnablock {
+  background-color: #d8ecd1;
+}
 aside.sidemenu {
   width: 200px;
   height: auto;
   float: right;
   text-align: left;
-  border: 2px solid #250000;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background-color: #ffdcbb;
 }
 aside.sidemenu li {
   padding-left: 20px;
@@ -73,15 +83,11 @@ aside.sidemenu h3 {
   margin: 0 auto;
 }
 .item {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   min-width: 200px;
 }
 .item p {
   font-size: 1em;
-  margin: 8px;
+  margin: 8px 20px;
 }
 .item li {
   font-size: 1em;
@@ -112,9 +118,6 @@ aside.sidemenu h3 {
       -ms-flex: 1;
           flex: 1;
 }
-.flex-three ul {
-  list-style-type: square;
-}
 .flex-four {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -128,6 +131,25 @@ section > h1 {
 }
 section article {
   margin: 0 1em;
+}
+article {
+  border-radius: 5px;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 1px gray;
+}
+article li {
+  margin-left: 8px;
+}
+.main-page {
+  box-shadow: none !important;
+  border: none !important;
+}
+section {
+  border-radius: 5px;
+}
+.border {
+  border-radius: 5px;
+  border: 1px solid gray;
 }
 ul {
   list-style-type: none;
@@ -275,16 +297,6 @@ nav a.current {
   background-image: linear-gradient(90deg, #e74c3c 25%, #e67e22 100%);
   background-image: -ms-linear-gradient(left, #e74c3c 25%, #e67e22 100%);
 }
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-  border: 1px solid red;
-  border-radius: 50%;
-  background-image: -webkit-linear-gradient(0deg, #e74c3c 25%, #e67e22 100%);
-  background-image: linear-gradient(90deg, #e74c3c 25%, #e67e22 100%);
-  background-image: -ms-linear-gradient(left, #e74c3c 25%, #e67e22 100%);
-  padding: 5px;
+.m20 {
+  margin-left: 2rem;
 }

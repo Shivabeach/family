@@ -27,22 +27,14 @@ class Pages extends CI_Controller {
 
 	public function van()
 	{
-		$name = "VanHorn";
-		$this->db->distinct();
-		$this->db->select('family, male,female')->where('family', $name)->group_by('male');
-		$query = $this->db->get('primary');
-		If($query->result())
-		{
-			$data1['famnames'] = $query->result();
-		}
 		$data['title'] = "VanHorn page";
 		$this->load->view('head/headfam',$data);
 		$this->load->view('include/nav2');
-		$this->load->view("pages/van", $data1);
+		$this->load->view("pages/van");
 		$this->load->view("foot/footer");
 	}
 
-	public function bos()
+	public function bos()//main bostick page
 	{
 		$data['title'] = "Bostick page";
 		$this->load->view('head/headfam',$data);
@@ -73,6 +65,56 @@ class Pages extends CI_Controller {
 		$this->load->view('head/headfam',$data);
 		$this->load->view('include/nav2');
 		$this->load->view("pages/vandna");
+		$this->load->view("foot/footer");
+	}
+
+	public function notes()
+	{
+		$data['title'] = "Notes page";
+		$this->load->view('head/headfam',$data);
+		$this->load->view('include/nav2');
+		$this->load->view("pages/notes");
+		$this->load->view("foot/footer");
+	}
+
+	public function vannames()
+	{
+		$name = "VanHorn";
+		$this->db->distinct();
+		$this->db->select("family, male, female, relationship, year")->from("primary")->where("family", $name)->group_by("year", "asc");
+		$query = $this->db->get();
+		if ($query->result()) {
+			$data1['folks'] = $query->result();
+		}
+		$data['title'] = "VanHorn Names";
+		$this->load->view('head/headfam',$data);
+		$this->load->view('include/nav2');
+		$this->load->view("pages/vannames", $data1);
+		$this->load->view("foot/footer");
+	}
+	public function bosdna()
+	{
+		$data = [];
+		$data['title'] = "Bostick DNA";
+		$this->load->view('head/headfam',$data);
+		$this->load->view('include/nav2');
+		$this->load->view("pages/bosdna");
+		$this->load->view("foot/footer");
+	}
+
+	public function bosnames()
+	{
+		$name = "Bostick";
+		$this->db->distinct();
+		$this->db->select("family, male, female, relationship, year")->from("primary")->where("family", $name)->group_by("year", "asc");
+		$query = $this->db->get();
+		if ($query->result()) {
+			$data1['folks'] = $query->result();
+		}
+		$data['title'] = "Bostick Names";
+		$this->load->view('head/headfam',$data);
+		$this->load->view('include/nav2');
+		$this->load->view("pages/bosnames", $data1);
 		$this->load->view("foot/footer");
 	}
 

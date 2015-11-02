@@ -18,8 +18,8 @@
   </section>
 </div>
 <div class="container smooth ">
-	<section>
-		<article>
+	<section class="main-page">
+		<article class="main-page">
 			<?php foreach($results as $row):?>
                 <?php echo "<h2> $row->title</h2>";?>
                 <?php echo $this->typography->auto_typography($row->content);?>

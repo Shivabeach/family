@@ -11,7 +11,9 @@
     "normalize.css": "latest",
     "sanitize-css": "~1.1.0",
     "superfish": "latest",
-    "timeago": "latest"
+    "timeago": "latest",
+    "font-awesome": "fontawesome#~4.4.0",
+    "hover": "~2.0.2"
   },
   "homepage": "https://github.com/Shivabeach/family",
   "authors": [

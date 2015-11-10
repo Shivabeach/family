@@ -10,10 +10,10 @@ class Forms extends CI_Controller {
 	public function form1() //insert family ancestry
 	{
 		$data = array (
-			'family'        => htmlspecialchars($this->input->post('family')),
-			'male'          => htmlspecialchars($this->input->post('male')),
-			'female'        => htmlspecialchars($this->input->post('female')),
-			'relationship' => htmlspecialchars($this->input->post('relationship')),
+			'family'        => htmlspecialchars(trim($this->input->post('family'))),
+			'male'          => htmlspecialchars(trim($this->input->post('male'))),
+			'female'        => htmlspecialchars(trim($this->input->post('female'))),
+			'relationship' =>  htmlspecialchars($this->input->post('relationship')),
 			'relative'      => htmlspecialchars($this->input->post('relative')),
 			'level'         => htmlspecialchars($this->input->post('level')),
 			'year'          => htmlspecialchars($this->input->post('year')),
@@ -22,9 +22,9 @@ class Forms extends CI_Controller {
 			'comment'       => htmlspecialchars($this->input->post('comment'))
 
 		);
-		$this->form_validation->set_rules('family', 'Family', 'required|trim');
-		$this->form_validation->set_rules('male', 'Male', 'required|trim');
-		$this->form_validation->set_rules('female', 'Female', 'required|trim');
+		$this->form_validation->set_rules('family', 'Family', 'required');
+		$this->form_validation->set_rules('male', 'Male', 'required');
+		$this->form_validation->set_rules('female', 'Female', 'required');
 		$this->form_validation->set_rules('relationship', 'Relationship', 'required|trim');
 		$this->form_validation->set_rules('relative', 'Relative', 'required|trim|is_unique(primary.relative)');
 		$this->form_validation->set_rules('level', 'Level', 'required|trim|numeric');
@@ -55,7 +55,7 @@ class Forms extends CI_Controller {
 	public function relative_search()
 	{
 		$seek = htmlspecialchars(trim($this->input->post('name')));
-		$this->form_validation->set_rules('name', 'Relative Name', 'required|trim');
+		$this->form_validation->set_rules('name', 'Relative Name', 'required');
 		if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();
 		}else

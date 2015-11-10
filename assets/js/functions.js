@@ -90,12 +90,12 @@ $(function () {
     $("dd.tool").tooltip();
   });
 
-  for (var i = 0; i < document.links.length; i++) {
+  for (var i = 0; i < document.links.length; i++) {/*this highlights the current active link*/
     if (document.links[i].href == document.URL) {
         document.links[i].className = 'current';
     }
 }
-$( function() {
+$(function() {
     "use strict";
     $(".sf-menu").superfish();
 });

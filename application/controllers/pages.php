@@ -2,13 +2,17 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pages extends CI_Controller {
+	public function __construct()
+       {
+            parent::__construct();
+            $this->load->database();
+        }
 /**
  * gets data for the main page
  * @return string [description]
  */
 	public function index()
 	{
-		$this->load->database();
 		$this->load->model("get_data");
 		$data["results"] = $this->get_data->getdata("vanhorn");
 		$data1['title'] = "Main Page";
@@ -70,10 +74,23 @@ class Pages extends CI_Controller {
 
 	public function notes()
 	{
+		$family = "VanHorn";
+		$family2 = "Bostick";
+		$this->db->select("family, rel_name, note, year")->from("notes")->where("family", $family)->group_by("year");
+		$query = $this->db->get();
+		if ($query->result()) {
+			$data1['notes'] = $query->result();
+		}
+		$family2 = "Bostick";
+		$this->db->select("family, rel_name, note, year")->from("notes")->where("family", $family2)->group_by("year");
+		$query = $this->db->get();
+		if ($query->result()) {
+			$data1['notes2'] = $query->result();
+		}
 		$data['title'] = "Notes page";
 		$this->load->view('head/headfam',$data);
 		$this->load->view('include/nav2');
-		$this->load->view("pages/notes");
+		$this->load->view("pages/notes", $data1);
 		$this->load->view("foot/footer");
 	}
 

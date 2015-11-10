@@ -1,7 +1,7 @@
 <body>
 <nav class="nav1 item">
-    <ul  class="sf-menu">
-      <li class="line"><?php echo anchor('/','Home');?></li>
+    <ul class="sf-menu">
+      <li class="line"><a href="/"><i class="fa fa-home fa-lg">&nbsp;Home</a></i></li>
       <li class="line"><a href="#">VanHorns </a>
       	<ul>
         	<li><?php echo anchor('pages/van','VanHorn History');?> </li>

@@ -111,10 +111,8 @@ form textarea {
 form textarea:focus,
 form input:focus {
   outline: 4px solid Chocolate;
-  text-indent: 5px;
 }
 form textarea {
-  text-indent: 5px;
   color: #ffffff;
 }
 input[type='submit'] {

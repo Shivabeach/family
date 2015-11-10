@@ -1,8 +1,8 @@
 @import (less) url("colors.less");
 @import (css) url("typo-dist.css");
 @import (css) url("fonts-dist.css");
-@import (css) url("bower_components/hover/css/hover.css");
-@import (css) url("bower_components/font-awesome/css/font-awesome.css");
+@import (css) url("http://localhost/family/bower_components/hover/css/hover.css");
+@import (css) url("http://localhost/family/bower_components/font-awesome/css/font-awesome.css");
 
 html {
 	box-sizing: border-box;
@@ -14,7 +14,7 @@ html {
 body, html {
 	margin: 0;
 	padding: 0;
-	background-color: rgba(20,255,255, 0.3);
+	background-color: @pantone;
 	font-size: 16px;
 	font-family: georgia;
 	line-height: 1.5;
@@ -31,7 +31,9 @@ header {
 		font-family: 'england_hand_dbregular';
 		font-size: 4rem;
 		margin: 0;
+		width: 100%;
 		color: Pantone #de007d;
+		text-shadow: 1px 1px 3px Tomato,-1px -1px 3px darken(@blue, 30%);
 	}
 }
 
@@ -76,12 +78,14 @@ aside.sidemenu {
 .container {
 	display: flex;
 	flex-flow: row wrap;
-	max-width: 1200px;
+	justify-content: space-around;
+	max-width: 70%;
 	margin: 0 auto;
+
 }
 
 .item {
-	min-width: 200px;
+	min-width: 300px;
 	p {
 		font-size: 1em;
 		margin: 8px 20px;
@@ -118,22 +122,26 @@ section>h1 {
 }
 section article {
 	margin: 0 1em;
+	color: @pantone3;
 }
 article {
-	border-radius: 5px;
-	border: 1px solid gray;
 	box-shadow: 1px 1px 1px gray;
+	background-color: @pantone1;
 	li {
 		margin-left: 8px;
 	}
-
 }
+
 .main-page {
 		box-shadow: none !important;
 		border: none !important;
+		border-radius: 10px;
+		h2:nth-of-type(1) {
+			padding-top: 1em;
+		}
 	}
 section {
-	border-radius: 5px;
+	border-radius: 10px;
 }
 .border {
 	border-radius: 5px;
@@ -159,7 +167,6 @@ nav {
 	clear: both;
 	margin-bottom: 5px;
 	li {
-
 		display: inline;
 		a {
 			margin: 0 1em;
@@ -213,7 +220,7 @@ a[href^="http"]:empty::before {
   content: attr(href);
 }
 nav a.current {
-  background:darkblue;
+  background:DarkBlue;
   color:white;
 }
 /*
@@ -241,7 +248,8 @@ nav a.current {
 .smooth {
 		//background-color: rgba(255,255,255,0.8)!important;
 		background-image: none;
-		background-color: PapayaWhip;
+		background-color: @pantone2;
+		border-radius: 10px;
 		p {
 			margin: 5px 2em;
 			text-indent: 15px;
@@ -258,4 +266,8 @@ nav a.current {
 
 .m20 {
 	margin-left: 2rem;
+}
+
+.sf-menu li a:hover:before {
+	/* content: "<i class='fa-location-arrow'></i> "; */
 }

@@ -1,7 +1,7 @@
 @import url("typo-dist.css");
 @import url("fonts-dist.css");
-@import url("bower_components/hover/css/hover.css");
-@import url("bower_components/font-awesome/css/font-awesome.css");
+@import url("http://localhost/family/bower_components/hover/css/hover.css");
+@import url("http://localhost/family/bower_components/font-awesome/css/font-awesome.css");
 html {
   box-sizing: border-box;
 }
@@ -14,7 +14,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background-color: rgba(20, 255, 255, 0.3);
+  background-color: #ffd7a1;
   font-size: 16px;
   font-family: georgia;
   line-height: 1.5;
@@ -32,7 +32,9 @@ header h1 {
   font-family: 'england_hand_dbregular';
   font-size: 4rem;
   margin: 0;
+  width: 100%;
   color: Pantone #de007d;
+  text-shadow: 1px 1px 3px Tomato, -1px -1px 3px #000066;
 }
 .dnahead {
   background-color: #ffdcbb;
@@ -79,11 +81,14 @@ aside.sidemenu h3 {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  max-width: 1200px;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  max-width: 70%;
   margin: 0 auto;
 }
 .item {
-  min-width: 200px;
+  min-width: 300px;
 }
 .item p {
   font-size: 1em;
@@ -131,11 +136,11 @@ section > h1 {
 }
 section article {
   margin: 0 1em;
+  color: #78583b;
 }
 article {
-  border-radius: 5px;
-  border: 1px solid gray;
   box-shadow: 1px 1px 1px gray;
+  background-color: #fd703c;
 }
 article li {
   margin-left: 8px;
@@ -143,9 +148,13 @@ article li {
 .main-page {
   box-shadow: none !important;
   border: none !important;
+  border-radius: 10px;
+}
+.main-page h2:nth-of-type(1) {
+  padding-top: 1em;
 }
 section {
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .border {
   border-radius: 5px;
@@ -218,7 +227,7 @@ a[href^="http"]:empty::before {
   content: attr(href);
 }
 nav a.current {
-  background: darkblue;
+  background: DarkBlue;
   color: white;
 }
 /*
@@ -283,7 +292,8 @@ nav a.current {
 }
 .smooth {
   background-image: none;
-  background-color: PapayaWhip;
+  background-color: #ffc851;
+  border-radius: 10px;
 }
 .smooth p {
   margin: 5px 2em;
@@ -299,4 +309,7 @@ nav a.current {
 }
 .m20 {
   margin-left: 2rem;
+}
+.sf-menu li a:hover:before {
+  /* content: "<i class='fa-location-arrow'></i> "; */
 }

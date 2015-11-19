@@ -18,7 +18,7 @@ $(function () {
             type: type,
             data: data,
             success: function (response) {
-                $('#display').html(response);
+                $('#display').html(response).delay("5000").fadeOut("8000");
             }
         });
         return false;
@@ -35,7 +35,7 @@ $(function() {
             type: "POST",
             success: function(msg) {
                 if (msg) {
-                    $("#display").html(msg).show();
+                    $("#display").html(msg);
                 } else {
                     $("#display").text("nothing came back For some reason");
                 }

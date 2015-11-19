@@ -13,24 +13,24 @@ class Forms extends CI_Controller {
 			'family'        => htmlspecialchars(trim($this->input->post('family'))),
 			'male'          => htmlspecialchars(trim($this->input->post('male'))),
 			'female'        => htmlspecialchars(trim($this->input->post('female'))),
-			'relationship' =>  htmlspecialchars($this->input->post('relationship')),
-			'relative'      => htmlspecialchars($this->input->post('relative')),
-			'level'         => htmlspecialchars($this->input->post('level')),
-			'year'          => htmlspecialchars($this->input->post('year')),
-			'branch2'       => htmlspecialchars($this->input->post('branch2')),
-			'country'       => htmlspecialchars($this->input->post('country')),
-			'comment'       => htmlspecialchars($this->input->post('comment'))
+			'relationship' =>  htmlspecialchars(trim($this->input->post('relationship'))),
+			'relative'      => htmlspecialchars(trim($this->input->post('relative'))),
+			'level'         => htmlspecialchars(trim($this->input->post('level'))),
+			'year'          => htmlspecialchars(trim($this->input->post('year'))),
+			'branch2'       => htmlspecialchars(trim($this->input->post('branch2'))),
+			'country'       => htmlspecialchars(trim($this->input->post('country'))),
+			'comment'       => htmlspecialchars(trim($this->input->post('comment')))
 
 		);
-		$this->form_validation->set_rules('family', 'Family', 'required');
+		$this->form_validation->set_rules('family', 'Family', 'required|alpha|max_length[9]');
 		$this->form_validation->set_rules('male', 'Male', 'required');
 		$this->form_validation->set_rules('female', 'Female', 'required');
-		$this->form_validation->set_rules('relationship', 'Relationship', 'required|trim');
-		$this->form_validation->set_rules('relative', 'Relative', 'required|trim|is_unique(primary.relative)');
-		$this->form_validation->set_rules('level', 'Level', 'required|trim|numeric');
-		$this->form_validation->set_rules('year', 'Year', 'required|trim|numeric');
-		$this->form_validation->set_rules('branch2', 'Branch 2', 'required|trim');
-		$this->form_validation->set_rules('country', 'Country', 'required|trim');
+		$this->form_validation->set_rules('relationship', 'Relationship', 'required');
+		$this->form_validation->set_rules('relative', 'Relative', 'required|is_unique[primary.relative]');
+		$this->form_validation->set_rules('level', 'Level', 'required|numeric');
+		$this->form_validation->set_rules('year', 'Year', 'required|numeric');
+		$this->form_validation->set_rules('branch2', 'Branch 2', 'required');
+		$this->form_validation->set_rules('country', 'Country', 'required|alpha|max_length[20]');
 		$this->form_validation->set_rules('comment', 'Comment', 'trim');
 		if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();
@@ -79,6 +79,24 @@ class Forms extends CI_Controller {
 	         }
 	      }
 		}
+	}
+
+	public function namey()
+	{
+		$data = [
+			'family' => htmlspecialchars(trim($this->input->post('family'))),
+			'name' => htmlspecialchars(trim($this->input->post('name')))
+		];
+		$this->form_validation->set_rules('family', 'Family', 'required|alpha|max_length[9]');
+		$this->form_validation->set_rules('name', 'Name', 'required|alpha|max_length{20}|is_unique[names.name]');
+		if( $this->form_validation->run() == FALSE) {
+			echo validation_errors();
+		}else
+		{
+			$this->db->insert('names', $data);
+			echo "grand shit";
+		}
+
 	}
 }//END OF CONTROLLER
 /* End of file forms.php */

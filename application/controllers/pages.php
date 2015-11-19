@@ -135,6 +135,15 @@ class Pages extends CI_Controller {
 		$this->load->view("foot/footer");
 	}
 
+	public function namer()
+	{
+		$data['title'] = "Family Names";
+		$this->load->view('head/headfam',$data);
+		$this->load->view('include/nav2');
+		$this->load->view("admin/names");
+		$this->load->view("foot/footer");
+	}
+
 }
 
 /* End of file pages.php */

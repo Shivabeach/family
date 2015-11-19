@@ -78,12 +78,9 @@ aside.sidemenu h3 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   max-width: 70%;
   margin: 0 auto;
 }
@@ -140,7 +137,7 @@ section article {
 }
 article {
   box-shadow: 1px 1px 1px gray;
-  background-color: #fd703c;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 article li {
   margin-left: 8px;

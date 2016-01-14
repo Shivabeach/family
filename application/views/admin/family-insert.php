@@ -5,12 +5,15 @@
 			<article>
 				<section>
 					<h2>Family Relations Insert</h2>
+					<fieldset>
 					<?php echo validation_errors(); ?>
 					<?php $attr1 = array(
-						'id' => "ajax"
+						'id' => "ajax",
+						'class' => 'pure-form pure-form-aligned'
 					);?>
 					<?php echo form_open('/forms/form1', $attr1) ;?>
-					<p><label for="family">Family</label>
+					<div class="pure-control-group">
+					<label for="family">Family</label>
 					<?php
 						$attr2 = array(
 							'' => 'Pick one',
@@ -18,8 +21,8 @@
 							'Bostick' => 'Bostick'
 						);
 					echo form_dropdown("family", $attr2);?>
-				</p>
-				<p>
+				</div>
+				<div class="pure-control-group">
 					<label for="male">Male</label>
 					<?php
 					$attr4 = array(
@@ -28,8 +31,8 @@
 						'style'     => 'width:50%'
 					);?>
 					<?php echo form_input($attr4);?>
-				</p>
-				<p>
+				</div>
+				<div class="pure-control-group">
 					<label for="female">FeMale</label>
 					<?php
 					$attr5 = array (
@@ -38,8 +41,8 @@
 						'style'     => 'width:50%'
 					);?>
 					<?php echo form_input($attr5);?>
-				</p>
-				<p>
+				</div>
+				<div class="pure-control-group">
 					<label for="branch2">2nd Branch</label>
 					<?php
 					$attr10 = array (
@@ -49,8 +52,8 @@
 						'placeholder' => "Other family branch start"
 					);?>
 					<?php echo form_input($attr10);?>
-				</p>
-				<p>
+				</div>
+				<div class="pure-control-group">
 					<label for="relationship">Relationship</label>
 					<?php
 					$attr6 = array(
@@ -59,8 +62,8 @@
 						'style'     => 'width:50%'
 					);?>
 					<?php echo form_input($attr6);?> <span>8th Great Grandfather</span>
-				</p>
-				<p>
+				</div>
+				<div class="pure-control-group">
 					<label for="relative">Relative From Ancestry</label>
 					<?php
 					$attr7 = array (
@@ -70,8 +73,8 @@
 						'style'       => 'width:50%'
 					);?>
 					<?php echo form_input($attr7);?>
-				</p>
-				<p>
+				</div>
+				<div class="pure-control-group">
 					<label for="level">Cousin Level</label>
 					<?php
 					$attr8 = array (
@@ -80,8 +83,8 @@
 						'type'      => 'number'
 					);?>
 					<?php echo form_input($attr8);?> <span><u>3</u>rd cousin</span>
-				</p>
-				<p>
+				</div>
+				<div class="pure-control-group">
 					<label for="Year">Year Born</label>
 					<?php
 					$attr9 = [
@@ -90,8 +93,8 @@
 						'type'      => 'number'
 					];?>
 					<?php echo form_input($attr9);?>
-				</p>
-				<p>
+				</div>
+				<div class="pure-control-group">
 					<label for="country">Country of Birth</label>
 					<?php
 					$attr11 = [
@@ -101,8 +104,8 @@
 						'id' => 'country'
 					];?>
 					<?php echo form_input($attr11);?>
-				</p>
-				<p>
+				</div>
+				<div class="pure-control-group">
 					<label for="comment">Comment</label>
 					<br>
 					<?php
@@ -111,10 +114,13 @@
 						'id'   => 'comment'
 					];?>
 					<?php echo form_textarea($attr12);?>
-					</p>
+					</div>
+				<div class="pure-controls">	
 				<?php echo form_submit('submit', 'Submit');
 				echo form_reset('reset', 'Reset');
 				echo form_close();?>
+				</div>
+				</fieldset>
 			</section>
 		</article>
 	</div>

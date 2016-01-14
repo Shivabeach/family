@@ -1,5 +1,76 @@
 /*global $:false */
 /* beautify then minify */
+$(document).ajaxError(function (e, xhr, settings, error) {
+    "use strict";
+  console.log(error);
+});
+
+  $(function() {
+     "use strict";
+    $( ".dialog" ).dialog({
+        maxWidth: 1000,
+        width: 800,
+        modal: true,
+        autoOpen: false
+    });
+    $( ".opener" ).click(function() {
+       $( ".dialog" ).dialog( "open" );
+    });
+  });
+
+  $(function() {
+     "use strict";
+    $( ".dialog1" ).dialog({
+        maxWidth: 500,
+        minHeight: 300,
+        modal: true,
+        autoOpen: false
+    });
+    $( ".opener1" ).click(function() {
+       $( ".dialog1" ).dialog( "open" );
+    });
+  });
+
+  $(function() {
+     "use strict";
+    $( ".dialog2" ).dialog({
+        maxWidth: 500,
+        minHeight: 300,
+        modal: true,
+        autoOpen: false
+    });
+    $( ".opener2" ).click(function() {
+       $( ".dialog2" ).dialog( "open" );
+    });
+  });
+
+  $(function() {
+     "use strict";
+    $( ".dialog3" ).dialog({
+        minHeight: 300,
+        maxWidth: 500,
+        modal: true,
+        autoOpen: false
+    });
+    $( ".opener3" ).click(function() {
+       $( ".dialog3" ).dialog( "open" );
+    });
+});
+//   var $img = $('img');
+//     $(window).on('resize', function () {
+//     var viewport = {
+//             width   : $(this).width(),
+//             height : $(this).height()
+//         },
+//         ratio     = ($img.height() / $img.width()),
+//         imgHeight = Math.floor(viewport.width * ratio);
+
+//     $img.css({
+//         width     : viewport.width,
+//         height    : imgHeight,
+//         marginTop : (imgHeight > viewport.height) ? Math.floor((imgHeight - viewport.height) / 2 * -1) : 0
+//     });
+// }).trigger('resize');
 $(function () {
     "use strict";
     $('form#ajax').on('submit', function () {
@@ -18,7 +89,10 @@ $(function () {
             type: type,
             data: data,
             success: function (response) {
-                $('#display').html(response).delay("5000").fadeOut("8000");
+                $('#display').show().html(response);
+            },
+            error: function () {
+                alert('Sumptin not right');
             }
         });
         return false;
@@ -62,7 +136,7 @@ $(function () {
   });
 });
  // use for relative search form
-$(function () { 
+$(function () {
   "use strict";
   $("#search").submit(function () {
     var data = $('#search').serialize();
@@ -90,6 +164,14 @@ $(function () {
     $("dd.tool").tooltip();
   });
 
+  $(function () {
+    $("#tabs").tabs( {
+        active: 0,
+        heightStyle: "content",
+        event: "mouseover"
+    });
+  });
+
   for (var i = 0; i < document.links.length; i++) {/*this highlights the current active link*/
     if (document.links[i].href == document.URL) {
         document.links[i].className = 'current';
@@ -99,8 +181,59 @@ $(function() {
     "use strict";
     $(".sf-menu").superfish();
 });
+$(function() {
+    "use strict";
+    $('a#top').click(function () {
+      $(document.body).animate({scrollTop: 0}, 800);
+      return false;
+    });
+});
+$(window).on('scroll', function(){
+        var $timeline_block = $(".cd-timeline-block");
+        $timeline_block.each(function(){
+        if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+            $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+        }
+    });
+  });
+$(function() {
+    "use strict";
+    $( '.rel_count' ).on('click', function() {
+       $.ajax({
+        type: "get",
+        url: "../ajaxpages/inDatabase",
+        success: function (mesg) {
+            $('.display1').html(mesg);
+            }
+        });
+       return false;
+    });
+});
 
-$('a#top').click(function () {
-  $(document.body).animate({scrollTop: 0}, 800);
-  return false;
+$(function() {
+    "use strict";
+    $( '.ages' ).on('click', function() {
+       $.ajax({
+        type: "get",
+        url: "../ajaxpages/ages",
+        success: function (mesg) {
+            $('.display2').html(mesg);
+            }
+        });
+       return false;
+   });
+});
+
+$(function() {
+    "use strict";
+    $( '.level' ).on('click', function() {
+       $.ajax({
+        type: "get",
+        url: "../ajaxpages/level",
+        success: function (mesg) {
+            $('.display3').html(mesg);
+            }
+        });
+       return false;
+   });
 });

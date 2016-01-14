@@ -12,8 +12,8 @@
       	<?php
           foreach($notes as $row)
           {
-            echo "<dt>Name: $row->rel_name Year: $row->year</dt>";
-            echo "<dd>" . $this->typography->auto_typography($row->note) . "</dd>";
+            echo "<dt>Name: $row->rel_name<br> Year: $row->year</dt>";
+            echo "<dd>" . $this->typography->auto_typography($row->note) . "</dd>";           
           }
 
         ?>
@@ -21,17 +21,19 @@
     </article> 
   </section>
   
-  <section class="flex-two item">
-   <h1 class="page-title">Bostock Notes</h1>
+  <section class="flex-one item">
+   <h1 class="page-title">Bostick Notes</h1>
+   <article>
   	<dl>
         <?php
           foreach($notes2 as $row)
           {
-            echo "<dt>Name: $row->rel_name Year: $row->year</dt>";
+            echo "<dt>Name: $row->rel_name<br> Year: $row->year</dt>";
             echo "<dd>" . $this->typography->auto_typography($row->note) . "</dd>";
           }
 
         ?>
       </dl>
+    </article>
     </article> 
   </section>

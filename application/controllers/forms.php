@@ -30,7 +30,7 @@ class Forms extends CI_Controller {
 		$this->form_validation->set_rules('level', 'Level', 'required|numeric');
 		$this->form_validation->set_rules('year', 'Year', 'required|numeric');
 		$this->form_validation->set_rules('branch2', 'Branch 2', 'required');
-		$this->form_validation->set_rules('country', 'Country', 'required|alpha|max_length[20]');
+		$this->form_validation->set_rules('country', 'Country', 'required|max_length[20]');
 		$this->form_validation->set_rules('comment', 'Comment', 'trim');
 		if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();
@@ -40,8 +40,6 @@ class Forms extends CI_Controller {
 			echo "grand shit";
 		}
 	}
-
-
 	 //end form1 insert family members
 	/**
 	* [posts Creates posts for main pages]
@@ -69,13 +67,13 @@ class Forms extends CI_Controller {
       	echo "<h3>Found $num records for $seek</h3>";
 		if($query->num_rows() > 0) {
         	foreach ($query->result() as $row) {
-             echo "<dt> <h3 class='heading'>$row->family</h3> </dt>";
-             echo "<dd>Relatives:  <u>$row->male</u> - <u>$row->female</u></dd>";
-             echo "<dd>Was our $row->relationship</dd>";
-             echo "<dd>The relatives were born in <u>$row->country</u> in <u>$row->year</u></dd>";
-             echo "<dd>The person we are related to (<u>$row->relative</u>) is our $row->level cousin</dd>";
-             echo "<br>";
-             echo "<dd>Additional information: $row->comment</dd>";
+        	 echo "<article class='outline'>";
+             echo "<li><strong>Relatives:</strong>  <u>$row->male</u> - <u>$row->female</u></li>";
+             echo "<li>Was our $row->relationship</li>";
+             echo "<li>The relatives were born in <u>$row->country</u> in <u>$row->year</u></li>";
+             echo "<li>The person we are related to (<u>$row->relative</u>) is our $row->level cousin</li>";
+             echo "<li><strong>Additional information:</strong><br> $row->comment</li>";
+             echo "</article>";
 	         }
 	      }
 		}
@@ -83,12 +81,13 @@ class Forms extends CI_Controller {
 
 	public function namey()
 	{
+		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 		$data = [
 			'family' => htmlspecialchars(trim($this->input->post('family'))),
 			'name' => htmlspecialchars(trim($this->input->post('name')))
 		];
 		$this->form_validation->set_rules('family', 'Family', 'required|alpha|max_length[9]');
-		$this->form_validation->set_rules('name', 'Name', 'required|alpha|max_length{20}|is_unique[names.name]');
+		$this->form_validation->set_rules('name', 'Name', 'required|alpha|max_length{20}');
 		if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();
 		}else

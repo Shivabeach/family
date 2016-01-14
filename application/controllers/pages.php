@@ -50,12 +50,35 @@ class Pages extends CI_Controller {
 	public function dat()
 	{
 		$this->db->distinct();
-		$this->db->select("family, male, female, relationship, year")->from("primary")->group_by("year", "asc");
+		$fam = "VanHorn";
+		$this->db->select("id, family, name")->from("names")->where("family", $fam)->order_by('id', 'asc');
 		$query = $this->db->get();
 		if ($query->result()) {
 			$data1['folks'] = $query->result();
 		}
-		$data['title'] = "Data page";
+		$this->db->distinct();
+		$fam = "Hunt";
+		$this->db->select("id, family, name")->from("names")->where("family", $fam)->order_by('id', 'asc');
+		$query = $this->db->get();
+		if ($query->result()) {
+			$data1['hunt'] = $query->result();
+		}
+		$this->db->distinct();
+		$fam = "Reed";
+		$this->db->select("id, family, name")->from("names")->where("family", $fam)->order_by('id', 'asc');
+		$query = $this->db->get();
+		if ($query->result()) {
+			$data1['reed'] = $query->result();
+		}
+		$this->db->distinct();
+		$fam = "Bostick";
+		$this->db->where("family", $fam);
+		$query = $this->db->get('names');
+		if ($query->result()) {
+			$data1['bostick'] = $query->result();
+		}
+
+		$data['title'] = "Family Names";
 		$this->load->view('head/headfam',$data);
 		$this->load->view('include/nav2');
 		$this->load->view("pages/data", $data1);
@@ -74,6 +97,7 @@ class Pages extends CI_Controller {
 
 	public function notes()
 	{
+		$data = [];
 		$family = "VanHorn";
 		$family2 = "Bostick";
 		$this->db->select("family, rel_name, note, year")->from("notes")->where("family", $family)->group_by("year");
@@ -143,6 +167,24 @@ class Pages extends CI_Controller {
 		$this->load->view("admin/names");
 		$this->load->view("foot/footer");
 	}
+
+	public function timeline()
+	{
+		$data['title'] = "Family Timeline";
+		$this->load->view('head/headfam',$data);
+		$this->load->view('include/nav2');
+		$this->load->view("pages/time");
+		$this->load->view("foot/footer");
+	}
+	public function datapages()
+	{
+		$data['title'] = "Family Timeline";
+		$this->load->view('head/headfam',$data);
+		$this->load->view('include/nav2');
+		$this->load->view("pages/data_page");
+		$this->load->view("foot/footer");
+	}
+
 
 }
 

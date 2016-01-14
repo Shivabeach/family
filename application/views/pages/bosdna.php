@@ -1,15 +1,16 @@
 <div class="container">
   <header class="labels">
-    <h1>The VanHorn DNA</h1>
+    <h1>The Bostick DNA</h1>
   </header>
 </div>
 <div class="container">
   
   <section class="flex-one item">
-    <h1 class="page-title">Bostick DNA</h1>
-    <div class="dnahead">
-      <p>Bostick mDNA</p>
-    </div>
+    <h1 class="page-title">Bostick <abbr title="Mitochrondial DNA">mDNA</h1>
+    <article class="dnahead">
+         <p>This is the mitochrondial DNA passed down from Moms mother, to Mom, and then on to the Val and Susie. Susie's daughter has this, as well as Kelli's daughter. </p>
+    </article>
+   
     <article id="100">
     <div class="dnablock">
       <h3 id="top">From the Beginning MDNA</h3>

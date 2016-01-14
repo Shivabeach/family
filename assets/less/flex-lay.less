@@ -3,29 +3,33 @@
 @import (css) url("fonts-dist.css");
 @import (css) url("http://localhost/family/bower_components/hover/css/hover.css");
 @import (css) url("http://localhost/family/bower_components/font-awesome/css/font-awesome.css");
-
+/* Forms reference http://purecss.io/forms/ */
 html {
 	box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+ul li {
+	list-style-type: none;
 }
+
 body, html {
 	margin: 0;
 	padding: 0;
-	background-color: @pantone;
-	font-size: 16px;
+	background-color: @palette5;
+	font-size: 18px;
 	font-family: georgia;
 	line-height: 1.5;
 	-moz-osx-font-smoothing: grayscale;
   	-webkit-font-smoothing: antialiased;
   	text-rendering: optimizeLegibility;
+  	transition: all 300ms ease;
 }
 header {
+
 	width: 100%;
-	min-height: 100px;
-	line-height: 100px;
+	min-height: 100px !important;
+	align-items: center;
+
 	h1 {
 		text-align: center;
 		font-family: 'england_hand_dbregular';
@@ -35,6 +39,11 @@ header {
 		color: Pantone #de007d;
 		text-shadow: 1px 1px 3px Tomato,-1px -1px 3px darken(@blue, 30%);
 	}
+}
+.page-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .dnahead {
@@ -80,11 +89,13 @@ aside.sidemenu {
 	flex-wrap: wrap;
 	max-width: 70%;
 	margin: 0 auto;
-
+}
+p {
+	color: @palette1;
 }
 
 .item {
-	min-width: 300px;
+
 	p {
 		font-size: 1em;
 		margin: 8px 20px;
@@ -96,21 +107,8 @@ aside.sidemenu {
 .papaya {
 	background-color: #E8C6B6;
 }
-.flex-one {
-	//background-color: rgba(255,255,255,0.6);
-	background-color: #E8C6B6;
-	flex: 1;
-	min-height: 100px;
-}
-.flex-two {
-	background-color: #E8C6B6;
-	flex: 1;
-	min-height: 100px;
-}
-
-.flex-three {
-	background-color: #E8C6B6;
-	flex: 1;
+.flex-one,.flex-two, .flex-three {
+	flex: 1 1 0;
 }
 .flex-four {
 	flex-direction: column;
@@ -119,15 +117,30 @@ aside.sidemenu {
 section>h1 {
 	margin-left: .5em;
 }
-section article {
-	margin: 0 1em;
-	color: @pantone3;
+section.datar {
+	display: flex;
+	content-justify: space-between;
+	flex-flow: row wrap;
+	//background-color:@palette3;
+}
+section article, .sticky {
+	margin: 0 1em 1em;
+	color: @palette1;
+}
+section article:last-of-type, article.sticky {
+	padding: 10px 0;
 }
 article {
 	box-shadow: 1px 1px 1px gray;
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,0.1);
 	li {
 		margin-left: 8px;
+	}
+	li:last-of-type {
+		padding-bottom: 10px;
+	}
+	p:last-of-type {
+		padding-bottom: 10px;
 	}
 }
 
@@ -151,6 +164,9 @@ ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+.inliner {
+	display: inline;
 }
 h2 {
 	width: 100%;
@@ -181,12 +197,16 @@ nav {
 footer {
 	padding: 10px;
 	width: 100%;
-	background-color: rgba(255,255,255,0.6);
+	color: @liteGray;
+	background-color: @darkGray;
 	li {
 	font-size: .75rem;
 	margin: 7px 2em;
 		a {
 			color: red;
+		}
+		a:hover {
+			color: #fff;
 		}
 	}
 	h3 {
@@ -194,9 +214,11 @@ footer {
 	}
 }
 blockquote {
-	margin-left: 1em;
+	margin-left: 4rem;
 	padding: 5px;
 	border-left: 1px inset LightCyan;
+	font-weight: 600;
+	font-size: 1.2rem;
 }
 
 dd {
@@ -205,11 +227,23 @@ dd {
 dd[alt*="Click"]:hover {
 	background-color: @cornsilk;
 }
-
 dt {
 	margin: 1em;
+	font-size: 2em;
+	font-weight: 600;
+	color: black;
+	font-family: 'england_hand_dbregular';
 }
-
+hr.half {
+	width: 50%;
+	text-align: center;
+}
+article.outline {
+	box-shadow: 1px 1px 2px #222;
+	li {
+		list-style-type: none;
+	}
+}
 h3.heading {
 	background-color: lighten(#E82C0C, 30%);
 	font-weight: bold;
@@ -225,6 +259,13 @@ nav a.current {
 /*
 	Misc. Classes
  */
+button {
+	text-align: center;
+	box-shadow: 1px 1px 3px #222;
+}
+button:hover {
+	box-shadow: -2px -2px -4px red;
+}
 .centered {
 	display: flex; /* establish flex container */
     flex-direction: column;
@@ -245,9 +286,7 @@ nav a.current {
     }
 }
 .smooth {
-		//background-color: rgba(255,255,255,0.8)!important;
 		background-image: none;
-		background-color: @pantone2;
 		border-radius: 10px;
 		p {
 			margin: 5px 2em;
@@ -270,3 +309,33 @@ nav a.current {
 .sf-menu li a:hover:before {
 	/* content: "<i class='fa-location-arrow'></i> "; */
 }
+
+#display {
+	display: none
+}
+
+.pad > li {
+	padding: 3px 0;
+}
+
+/*
+Modal buttons
+ */
+.modal-button {
+	background-color: #BDD2FF;
+	color: black;
+	box-shadow: 1px 1px 2px #222;
+}
+
+.display1, .display2,.display3 {
+	flex: 1 0 auto;
+	height: 50px;
+	font-family: 'england_hand_dbregular';
+	font-size: 3em;
+}
+.center {
+	display: flex; /* make each flex item a flex container, as well */
+    align-items: center; /* center text vertically (in this case) */
+    justify-content: center;
+}
+

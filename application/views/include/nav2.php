@@ -18,11 +18,17 @@
       <li><?php echo anchor('pages/boslinks','Family Links');?></li>
 		</ul>
       </li>
-      <li class="line"><?php echo anchor('pages/dat','Data');?></li>
-      <li class="line"><?php echo anchor('pages/dna','DNA');?></li>
+      <li class="line"><?php echo anchor('pages/dat','Names');?></li>
+        <li class="line"><a href="#"> Timelines </a>
+        <ul>
+          <li class="line"><?php echo anchor('pages/timeline','VanHorn');?></li>
+          <li class="line"><?php echo anchor('pages/timeline','Hunt');?></li>
+          <li class="line"><?php echo anchor('pages/timeline','Bostick');?></li>
+          <li class="line"><?php echo anchor('pages/timeline','Reed');?></li>
+        </ul>     
 	  <li class="line"><?php echo anchor('pages/fam', 'Family Insert');?></li>
     <li class="line"><?php echo anchor('pages/namer', 'Family Names');?></li>
     <li class="line"><?php echo anchor('pages/notes', 'Notes');?></li>
-      
+    <li class="line"><?php echo anchor('pages/datapages', 'Data');?></li>      
     </ul>
 </nav>

@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="<?php echo base_url('bower_components/jquery-ui/themes/south-street/jquery-ui.min.css');?>">
 		<link rel="stylesheet" href="<?php echo base_url('bower_components/superfish/dist/css/superfish.css');?>">
 		<link rel="stylesheet" href="<?php echo base_url('bower_components/lightbox2/dist/css/lightbox.css');?>">
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 		<script src="<?php echo base_url('bower_components/jquery/dist/jquery.min.js');?>"></script>
 	</head>
 	<body>

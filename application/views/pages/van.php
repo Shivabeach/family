@@ -21,12 +21,8 @@
       </p>
     </article>
 
-  </section>
-
-  <section class="flex-two item">
-    <h1>Details</h1>
-    <article>
-      <h3>Matthy's Sons</h3>
+   <article>
+    <h3>Matthy's Sons</h3>
       <p> Matthys had 2 sons, Abraham(1699-1759) and Cornelius(1695-1744). </p>
         <p>Abraham Van Horne was baptized on 15 January 1699 at Old First Dutch Reformed Church, Brooklyn, Kings Co., New York; sponsors Niklaes Brouwer and his wife Jannetje.<sub>2</sub> </p><p> Cornelis Van Horne was baptized on 4 May 1695 at Old First Dutch Reformed Church, Brooklyn, Kings Co., New York; sponsors Thomas Lammerse, Elizabeth Thomas.Cornelius was a Captain in the Kings Militia<sub>3</sub></p>
 
@@ -41,18 +37,7 @@
       </blockquote>
 
     </article>
-  </section>
-  <section class="flex-three item">
-    <h1>Notes</h1>
-    <article>
-      <h3>Matthys</h3>
-      <ul>
-        <li><blockquote>There were three immigrants to New Netherlands whose descendants took some version of the Van Horne surname. The three men were Jan Cornelissen, from Hoorn, North Holland; Christian Barentsen, probably from Hoorn, Terschelling Island, Friesia; and Matthys Cornelissen from Jutland(Denmark). These men were not related, and had absolutely nothing to do with one another after coming to North America.<sub>1</sub></blockquote></li>
-        <li>New Netherlands became what is now known as New York City when the British showed up and forced the city to surrender.</li>
-      </ul>
-    </article>
-    
-  </section>
+   </section>
 </div>
 <div class="container">
   <footer class="flex-four">

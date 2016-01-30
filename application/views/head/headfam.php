@@ -12,6 +12,5 @@
   <link rel="stylesheet" href="<?php echo base_url('bower_components/font-awesome/css/font-awesome.min.css');?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css');?>">
   <link rel="stylesheet" href="<?php echo base_url('bower_components/pure/pure-min.css');?>">
-
-
+  <link rel="stylesheet" href="<?php echo base_url('bower_components/datatables/media/css/jquery.dataTables.css');?>">
 </head>

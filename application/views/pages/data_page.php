@@ -5,6 +5,9 @@
 </div>
 <div class="container">
 <section class="datar">
+	<div class="flex-four">
+		<p>The following information comes from only those records that Ancestry determines us as having a provable linkage with another person. </p>
+	</div>
 	<div class="flex-one item">
 		
 			<article>
@@ -36,7 +39,23 @@
 	</div>
 	<div class="flex-one item">
 		<article>
-			<p>Lorem ipsum dolor sit amet.</p>
+			<p>Birth Places. Countrys or states.</p>
+			<p class="center"><button class="country hvr-shutter-in-horizontal" name="country">
+				Countries
+			</button></p>
+			<div class="display4 center"></div>
+		</article>
+	</div>
+	<div class="flex-one item">
+		<article>
+			<p>First people of the 4 familys to Migrate to America</p>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="display5 center"></div>
 		</article>
 	</div>
 	</section>

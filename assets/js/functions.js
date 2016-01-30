@@ -1,5 +1,12 @@
 /*global $:false */
 /* beautify then minify */
+$(function() {
+    "use strict";
+    $('#country').DataTable({
+       "order": [[ 0, 'asc' ], [ 1, 'asc' ]]
+    });
+})
+
 $(document).ajaxError(function (e, xhr, settings, error) {
     "use strict";
   console.log(error);
@@ -232,6 +239,20 @@ $(function() {
         url: "../ajaxpages/level",
         success: function (mesg) {
             $('.display3').html(mesg);
+            }
+        });
+       return false;
+   });
+});
+
+$(function() {
+    "use strict";
+    $( '.country' ).on('click', function() {
+       $.ajax({
+        type: "get",
+        url: "../ajaxpages/country",
+        success: function (mesg) {
+            $('.display4').fadeIn('2000').html(mesg);
             }
         });
        return false;

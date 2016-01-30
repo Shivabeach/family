@@ -31,6 +31,7 @@
     <script src="<?php echo base_url('bower_components/timeago/jquery.timeago.js');?>"></script>
     <script src="<?php echo base_url('assets/js/functions.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/main.js');?>"></script>
+    <script src="<?php echo base_url('bower_components/datatables/media/js/jquery.dataTables.js');?>"></script>
     <script>
         $(window).on('scroll', function(){
         var $timeline_block = $(".cd-timeline-block");

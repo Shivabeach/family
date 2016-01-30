@@ -10,7 +10,7 @@ class Ajaxpages extends CI_Controller {
         }
 
 	public function inDatabase()
-	{		
+	{
 		echo $this->db->count_all('primary');
 	}
 
@@ -23,7 +23,7 @@ class Ajaxpages extends CI_Controller {
 		    $reply = $row['year'];
 		    echo round($reply);
 		}
-		
+
 	}
 	public function level()
 	{
@@ -34,9 +34,32 @@ class Ajaxpages extends CI_Controller {
 		    $reply = $row['level'];
 		    echo round($reply);
 		}
-		
+
 	}
 
+	public function country()
+	{
+		$this->db->select('country as Country');
+		$this->db->select('Count(country) as Number');
+		$this->db->group_by('country');
+		//$this->db->order_by('country');
+		$query = $this->db->get('primary');
+		echo '<table id="country">';
+			echo "<tr>
+				<th>Country</th>
+				<th>Number</th>
+			</tr>";
+		foreach($query->result() as $row)
+		{
+			echo "<tr>
+				<td>$row->Country </td>
+				<td>$row->Number</td>
+				</tr>";
+		}
+		echo "</table>";
+	}
+//$sql = "SELECT `year` as Birth Year, COUNT(`year`)as count FROM `primary` group by `year` ";
+//SELECT `country` as Country, COUNT(`country`) as Number FROM `primary` group by `country` ORDER BY `Number` DESC
 }/* End of file ajaxpages.php */
 
 

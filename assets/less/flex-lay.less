@@ -13,8 +13,10 @@ ul li {
 }
 
 body, html {
+	height: 100vh;
 	margin: 0;
 	padding: 0;
+	background-image: url('../img/white.jpg');
 	background-color: @palette5;
 	font-size: 18px;
 	font-family: georgia;
@@ -25,11 +27,9 @@ body, html {
   	transition: all 300ms ease;
 }
 header {
-
 	width: 100%;
 	min-height: 100px !important;
 	align-items: center;
-
 	h1 {
 		text-align: center;
 		font-family: 'england_hand_dbregular';
@@ -39,6 +39,159 @@ header {
 		color: Pantone #de007d;
 		text-shadow: 1px 1px 3px Tomato,-1px -1px 3px darken(@blue, 30%);
 	}
+}
+
+h3 {
+	margin-left: 20px;
+}
+
+p {
+	color: @palette1;
+}
+
+section>h1 {
+	margin-left: .5em;
+}
+section.datar {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	border: 1px solid mistyrose;
+}
+section article, .sticky {
+	margin: 0 1em 1em;
+	color: @palette1;
+}
+section article:last-of-type, article.sticky {
+	padding: 10px 0;
+}
+article {
+	box-shadow: 1px 1px 1px gray;
+	background-color: rgba(255,255,255,0.1);
+	li {
+		margin-left: 8px;
+	}
+	li:last-of-type {
+		padding-bottom: 10px;
+	}
+	p:last-of-type {
+		padding-bottom: 10px;
+	}
+}
+
+section {
+	border-radius: 10px;
+}
+
+// list
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	width: 100%;
+}
+/*-------------------------------------
+	Nav
+-------------------------------------*/
+nav {
+	height: 3.5em;
+	width: 100%;
+	background-color: #bdd2ff;
+	//position: fixed;
+	clear: both;
+	margin-bottom: 5px;
+	li {
+		display: inline;
+		a {
+			margin: 0 1em;
+			font-family: 'hallo_sansblack';
+			letter-spacing: 1px;
+		}
+		a:hover {
+			color:dodgerblue;
+			background-color:#00008B;
+		}
+	}
+}
+footer {
+	padding: 10px;
+	width: 100%;
+	color: @liteGray;
+	background-color: @darkGray;
+	li {
+	font-size: .75rem;
+	margin: 7px 2em;
+		a {
+			color: red;
+		}
+		a:hover {
+			color: #fff;
+		}
+	}
+	h3 {
+		margin: 0 2em;
+	}
+}
+blockquote {
+	margin-left: 4rem;
+	padding: 5px;
+	border-left: 3px inset @palette4;
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+
+dd {
+	margin: 3px 2em;
+}
+dd[alt*="Click"]:hover {
+	background-color: @cornsilk;
+}
+dt {
+	margin: 1em;
+	font-size: 2em;
+	font-weight: 600;
+	color: black;
+	font-family: 'england_hand_dbregular';
+}
+/*
+	Misc. Classes
+ */
+button {
+	text-align: center;
+	box-shadow: 1px 1px 3px #222;
+}
+button:hover {
+	box-shadow: -2px -2px -4px red;
+}
+
+/*	=============================================================================================================
+	classes
+==============================================================================================================*/
+
+hr.half {
+	width: 50%;
+	text-align: center;
+}
+article.outline {
+	box-shadow: 1px 1px 2px #222;
+	li {
+		list-style-type: none;
+	}
+}
+h3.heading {
+	background-color: lighten(#E82C0C, 30%);
+	font-weight: bold;
+}
+
+a[href^="http"]:empty::before {
+  content: attr(href);
+}
+nav a.current {
+  background:DarkBlue;
+  color:white;
 }
 .page-title {
 	display: flex;
@@ -80,22 +233,15 @@ aside.sidemenu {
 		text-shadow: 1px 1px 1px black;
 		background-color: LemonChiffon;
 	}
-	h3 {
-		margin-left: 20px;
-	}
 }
 .container {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 70%;
 	margin: 0 auto;
+	justify-content: flex-start;
 }
-p {
-	color: @palette1;
-}
-
 .item {
-
 	p {
 		font-size: 1em;
 		margin: 8px 20px;
@@ -108,42 +254,15 @@ p {
 	background-color: #E8C6B6;
 }
 .flex-one,.flex-two, .flex-three {
-	flex: 1 1 0;
+	flex: 1 1 300px;
 }
 .flex-four {
 	flex-direction: column;
-	height: auto;
-}
-section>h1 {
-	margin-left: .5em;
-}
-section.datar {
-	display: flex;
-	content-justify: space-between;
-	flex-flow: row wrap;
-	//background-color:@palette3;
-}
-section article, .sticky {
-	margin: 0 1em 1em;
-	color: @palette1;
-}
-section article:last-of-type, article.sticky {
-	padding: 10px 0;
-}
-article {
-	box-shadow: 1px 1px 1px gray;
-	background-color: rgba(255,255,255,0.1);
-	li {
-		margin-left: 8px;
-	}
-	li:last-of-type {
-		padding-bottom: 10px;
-	}
-	p:last-of-type {
-		padding-bottom: 10px;
+	min-height: 50px;
+	p {
+		align-self: center;
 	}
 }
-
 .main-page {
 		box-shadow: none !important;
 		border: none !important;
@@ -152,119 +271,13 @@ article {
 			padding-top: 1em;
 		}
 	}
-section {
-	border-radius: 10px;
-}
+
 .border {
 	border-radius: 5px;
 	border: 1px solid gray;
 }
-// list
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
 .inliner {
 	display: inline;
-}
-h2 {
-	width: 100%;
-}
-/*-------------------------------------
-	Nav
--------------------------------------*/
-nav {
-	height: 3.5em;
-	width: 100%;
-	background-color: #bdd2ff;
-	//position: fixed;
-	clear: both;
-	margin-bottom: 5px;
-	li {
-		display: inline;
-		a {
-			margin: 0 1em;
-			font-family: 'hallo_sansblack';
-			letter-spacing: 1px;
-		}
-		a:hover {
-			color:DodgerBlue;
-			background-color:#00008B;
-		}
-	}
-}
-footer {
-	padding: 10px;
-	width: 100%;
-	color: @liteGray;
-	background-color: @darkGray;
-	li {
-	font-size: .75rem;
-	margin: 7px 2em;
-		a {
-			color: red;
-		}
-		a:hover {
-			color: #fff;
-		}
-	}
-	h3 {
-		margin: 0 2em;
-	}
-}
-blockquote {
-	margin-left: 4rem;
-	padding: 5px;
-	border-left: 1px inset LightCyan;
-	font-weight: 600;
-	font-size: 1.2rem;
-}
-
-dd {
-	margin: 3px 2em;
-}
-dd[alt*="Click"]:hover {
-	background-color: @cornsilk;
-}
-dt {
-	margin: 1em;
-	font-size: 2em;
-	font-weight: 600;
-	color: black;
-	font-family: 'england_hand_dbregular';
-}
-hr.half {
-	width: 50%;
-	text-align: center;
-}
-article.outline {
-	box-shadow: 1px 1px 2px #222;
-	li {
-		list-style-type: none;
-	}
-}
-h3.heading {
-	background-color: lighten(#E82C0C, 30%);
-	font-weight: bold;
-}
-
-a[href^="http"]:empty::before {
-  content: attr(href);
-}
-nav a.current {
-  background:DarkBlue;
-  color:white;
-}
-/*
-	Misc. Classes
- */
-button {
-	text-align: center;
-	box-shadow: 1px 1px 3px #222;
-}
-button:hover {
-	box-shadow: -2px -2px -4px red;
 }
 .centered {
 	display: flex; /* establish flex container */
@@ -337,5 +350,12 @@ Modal buttons
 	display: flex; /* make each flex item a flex container, as well */
     align-items: center; /* center text vertically (in this case) */
     justify-content: center;
+}
+#country {
+	font-size: 1em;
+	font-family: arial;
+	td {
+		text-align: center;
+	}
 }
 

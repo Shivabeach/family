@@ -26,7 +26,7 @@ class Forms extends CI_Controller {
 		$this->form_validation->set_rules('male', 'Male', 'required');
 		$this->form_validation->set_rules('female', 'Female', 'required');
 		$this->form_validation->set_rules('relationship', 'Relationship', 'required');
-		$this->form_validation->set_rules('relative', 'Relative', 'required|is_unique[primary.relative]');
+		$this->form_validation->set_rules('relative', 'Relative', 'required');
 		$this->form_validation->set_rules('level', 'Level', 'required|numeric');
 		$this->form_validation->set_rules('year', 'Year', 'required|numeric');
 		$this->form_validation->set_rules('branch2', 'Branch 2', 'required');

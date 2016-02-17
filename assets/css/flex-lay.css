@@ -51,7 +51,7 @@ p {
 section > h1 {
   margin-left: .5em;
 }
-section.datar {
+.datar {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -379,9 +379,6 @@ aside.sidemenu a:visited {
 }
 .sf-menu li a:hover:before {
   /* content: "<i class='fa-location-arrow'></i> "; */
-}
-#display {
-  display: none;
 }
 .pad > li {
   padding: 3px 0;

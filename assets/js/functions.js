@@ -1,11 +1,6 @@
-/*global $:false */
+/*global $:false,
+window:false */
 /* beautify then minify */
-$(function() {
-    "use strict";
-    $('#country').DataTable({
-       "order": [[ 0, 'asc' ], [ 1, 'asc' ]]
-    });
-})
 
 $(document).ajaxError(function (e, xhr, settings, error) {
     "use strict";
@@ -96,7 +91,7 @@ $(function () {
             type: type,
             data: data,
             success: function (response) {
-                $('#display').show().html(response);
+                $('#display').html(response);
             },
             error: function () {
                 alert('Sumptin not right');
@@ -109,7 +104,7 @@ $(function() {
     "use strict";
     $("#form1").submit(function() {
         var data = $("#form1").serialize();
-        alert(data); return false;
+        //alert(data); return false;
         $.ajax({
             url: "/forms/form1",
             data: data,
@@ -168,10 +163,12 @@ $(function () {
 });
 
   $(function() {
+    "use strict";
     $("dd.tool").tooltip();
   });
 
   $(function () {
+    "use strict";
     $("#tabs").tabs( {
         active: 0,
         heightStyle: "content",

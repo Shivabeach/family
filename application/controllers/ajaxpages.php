@@ -16,15 +16,14 @@ class Ajaxpages extends CI_Controller {
 
 	public function ages()
 	{
-		//$query = $this->db->select_avg('year')->get('primary');
 		$q = $this->db->select_avg('year')->get('primary');
 		foreach ($q->result_array() as $row)
 		{
 		    $reply = $row['year'];
 		    echo round($reply);
 		}
-
 	}
+
 	public function level()
 	{
 		//$query = $this->db->select_avg('year')->get('primary');
@@ -41,10 +40,10 @@ class Ajaxpages extends CI_Controller {
 	{
 		$this->db->select('country as Country');
 		$this->db->select('Count(country) as Number');
-		$this->db->group_by('country');
-		//$this->db->order_by('country');
+		$this->db->group_by('Country');
+		$this->db->order_by('Number', 'desc');
 		$query = $this->db->get('primary');
-		echo '<table id="country">';
+		echo '<table id="country" class="pure-table">';
 			echo "<tr>
 				<th>Country</th>
 				<th>Number</th>

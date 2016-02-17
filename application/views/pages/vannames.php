@@ -34,7 +34,8 @@
      <?php echo validation_errors(); ?>
      <?php 
      $attr = array (
-     'id' => 'ajax'
+     'id' => 'ajax',
+     'class' => 'pure-form'
      );
       echo form_open('forms/relative_search', $attr);
       $attr1 = [
@@ -44,10 +45,18 @@
         'style' => 'width: 50%',
       ];
       echo form_input($attr1);
-      echo form_submit('submit', 'Submit');
+      $attr3 = [
+        'id' => 'submit',
+        'value' => 'Submit',
+        'type' => 'submit',
+        'class' => 'pure-button'
+      ];
+      echo form_submit($attr3);
       $attr2 = [
         'id' => 'clear',
-        'value' => 'Clear All'
+        'value' => 'Clear All',
+        'type' => 'button',
+        'class' => 'pure-button'
       ];
       echo form_reset($attr2);
       echo form_close();

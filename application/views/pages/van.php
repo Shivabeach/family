@@ -3,10 +3,17 @@
     <h1>The VanHorns</h1>
   </header>
 </div>
-<div class="container">
 
-  <section class="flex-one item">
-    <h1 class="page-title">Beginnings</h1>
+
+  <div class="container ">
+    <div class="box-left">
+     <p>Screen</p>
+     <div id="size"></div>
+     <p>Window</p>
+     <div id="size2"></div>
+    </div>
+    <div class="main-content">
+      <h1 class="page-title">Beginnings</h1>
     <article>
       <h3>Denmark!</h3>
       <p>
@@ -29,7 +36,7 @@
       <p>Based on my DNA testing, we are direct descendants of Matthys and his son Abraham.</p>
       <p>When Matthys moved here, the government required a surname. It is thought that Matthys came from one of the two cities named Horne in northern and southern Jutland. So the two sons used the surnames Van Horne. This was the first use of the name VanHorne ['see Notes'] in our part of the family.</p>
 
-      <p>Abraham, who is our 6th great-grandfather, Started a tavern in the place now known as Whitehouse, Hunterdon New Jersey. The town is called Whitehouse becuase his tavern was painted white.</p>
+      <p>Abraham, who is our 6th great-grandfather, Started a tavern in the place now known as Whitehouse, Hunterdon New Jersey. The town is called Whitehouse because his tavern was painted white.</p>
       <blockquote>
         <p>In 1722 Abraham sold his half of the property and purchased 490 acres of land in Readington Township, Hunterdon Co., New Jersey through which ran Rockaway Creek. This land was in 490 acres of “L” shape. Here he developed a grist mill and saw mill on the banks of the creek. About 1750 Abraham Van Horne built the first tavern in the area. It was on the road from Clinton to Somerville where it crossed Rockaway Creek (now route 22). Because the building had white plastered walls it became known as the "White House". The name also was given to the village which sprang up around the tavern. It's location on this early trail immediately led to it's being a favorite stopping place for travelers and later for stage coaches of the Easton-New Brunswick Turnpike. By the time of the Revolution it's popularity had been well established. The homestead built about 1757 by Abraham Van Horne(Jr.) is about one hundred yards farther down Rockaway Creek from the site of the tavern and is still occupied (March 1976).</p>
 
@@ -37,7 +44,10 @@
       </blockquote>
 
     </article>
-   </section>
+   </div>
+    <div class="box-right">
+      box right
+    </div>
 </div>
 <div class="container">
   <footer class="flex-four">

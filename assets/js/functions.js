@@ -255,3 +255,14 @@ $(function() {
        return false;
    });
 });
+
+$(function () {
+    'use strict';
+
+    function showSize() {
+        $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
+        $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
+    }
+    $(window).on('resize', showSize);
+    showSize();
+});

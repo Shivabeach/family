@@ -17,8 +17,7 @@ body, html {
 	margin: 0;
 	padding: 0;
 	background-image: url('../img/white.jpg');
-	background-color: @palette5;
-	font-size: 18px;
+	background-color: @palette4;
 	font-family: georgia;
 	line-height: 1.5;
 	-moz-osx-font-smoothing: grayscale;
@@ -66,7 +65,7 @@ section article:last-of-type, article.sticky {
 	padding: 10px 0;
 }
 article {
-	box-shadow: 1px 1px 1px gray;
+	box-shadow: 1px 5px 5px #355c7d;
 	background-color: rgba(255,255,255,0.1);
 	li {
 		margin-left: 8px;
@@ -77,6 +76,12 @@ article {
 	p:last-of-type {
 		padding-bottom: 10px;
 	}
+	p {
+		padding-left: 1rem;
+	}
+}
+article:last-of-type {
+	box-shadow: none;
 }
 
 section {
@@ -136,11 +141,9 @@ footer {
 	}
 }
 blockquote {
-	margin-left: 4rem;
+	margin-left: 3rem;
 	padding: 5px;
-	border-left: 3px inset @palette4;
-	font-weight: 600;
-	font-size: 1.2rem;
+	border-left: 3px inset @palette4;	
 }
 
 dd {
@@ -224,7 +227,7 @@ aside.sidemenu {
 		text-decoration: none;
 	}
 	a:hover {
-		background-color: Brown;
+		background-color: brown;
 		color:Azure;
 		padding: 3px;
 	}
@@ -237,9 +240,8 @@ aside.sidemenu {
 .container {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 70%;
+	max-width: 90%;
 	margin: 0 auto;
-	justify-content: flex-start;
 }
 .item {
 	p {
@@ -253,8 +255,21 @@ aside.sidemenu {
 .papaya {
 	background-color: #E8C6B6;
 }
-.flex-one,.flex-two, .flex-three {
-	flex: 1 1 300px;
+.box-left {
+	max-width: 200px;
+    flex: 1;
+    border: 1px solid #250000;
+}
+.main-content {
+   flex: 4;
+   border-left: 1px solid #250000;
+}
+.box-right {
+   background-color: @palette4;
+   flex: 1;
+    }
+.flex-three {
+
 }
 .flex-four {
 	flex-direction: column;
@@ -298,14 +313,7 @@ aside.sidemenu {
     	justify-content: center;
     }
 }
-.smooth {
-		background-image: none;
-		border-radius: 10px;
-		p {
-			margin: 5px 2em;
-			text-indent: 15px;
-		}
-	}
+
 .papaya {
 	background-color: #E8C6B6;
 }
@@ -358,4 +366,37 @@ Modal buttons
 		text-align: center;
 	}
 }
+
+ @media screen and (max-width: 810px) {
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box-left {
+            order: 1;
+            flex-direction: column;
+            flex: 1 1 100%;
+        }
+        .box2-left {
+            order: 4;
+            flex-direction: column;
+            flex: 1 1 100%;
+        }
+        .main-content {
+            order: 2;
+            flex-direction: column;
+            flex: 1 1 100%;
+        }
+        .box-right {
+            order: 3;
+            flex-direction: column;
+            flex: 1 1 100%;
+        }
+        .bottom {
+            display: none;
+        }
+        .flex-four {
+        	display: none;
+        }
+    }
 

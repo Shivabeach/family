@@ -4,8 +4,13 @@
   </header>
 </div>
 <div class="container">
-
-  <section class="flex-one item">
+  <div class="box-left">
+    <p>Screen</p>
+     <div id="size"></div>
+     <p>Window</p>
+     <div id="size2"></div>
+  </div>
+   <div class="main-content">
     <h1 class="page-title">Beginnings</h1>
     <article class="dnahead">
       <p>This is the Y-DNA that Randy and I share. This is passed down from Dad to us. Men pass their DNA to the sons, and mothers pass their <abbr title="Mitochondrial DNA"> MDNA </abbr> to the sons and daughters.  However in testing it is separated. This is our paternal DNA history.</p>
@@ -148,9 +153,10 @@
         <p>Swedish statesman Birger Magnusson and Russian writer Leo Tolstoy were both from this lineage.<sub>1</sub></p>
         <a class="m20" href="#top">Top</a>
     </article>
-
-  </section>
-
+  </div>
+   <div class="box-right">
+      box right
+    </div>
   </div>
   <div class="container">
   <footer class="flex-four border">

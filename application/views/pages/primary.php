@@ -4,9 +4,15 @@
   </header>
 </div>
 
-<div class="container smooth ">
-	<section class="main-page">
-    <article>
+<div class="container ">
+	<div class="box-left">
+     <p>Screen</p>
+     <div id="size"></div>
+     <p>Window</p>
+     <div id="size2"></div>
+     
+    </div>
+     <div class="main-content">
       <article>
         <h2>Our Heredity</h2>
         <p> Where we are from in the last 1000 years or so!
@@ -30,8 +36,10 @@
 	                <p>Created <?php echo $row->date;?></p>
         </article>
         	<?php endforeach;?>
-		
-	</section>
+		</div>
+    <div class="box-right">
+      box right
+    </div>
 </div>
 
 <div class="container">

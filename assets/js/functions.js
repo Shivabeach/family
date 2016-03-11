@@ -1,5 +1,5 @@
-/*global $:false,
-window:false */
+//global $:false
+//window:false
 /* beautify then minify */
 
 $(document).ajaxError(function (e, xhr, settings, error) {
@@ -58,21 +58,6 @@ $(document).ajaxError(function (e, xhr, settings, error) {
        $( ".dialog3" ).dialog( "open" );
     });
 });
-//   var $img = $('img');
-//     $(window).on('resize', function () {
-//     var viewport = {
-//             width   : $(this).width(),
-//             height : $(this).height()
-//         },
-//         ratio     = ($img.height() / $img.width()),
-//         imgHeight = Math.floor(viewport.width * ratio);
-
-//     $img.css({
-//         width     : viewport.width,
-//         height    : imgHeight,
-//         marginTop : (imgHeight > viewport.height) ? Math.floor((imgHeight - viewport.height) / 2 * -1) : 0
-//     });
-// }).trigger('resize');
 $(function () {
     "use strict";
     $('form#ajax').on('submit', function () {
@@ -258,7 +243,6 @@ $(function() {
 
 $(function () {
     'use strict';
-
     function showSize() {
         $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
         $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
@@ -266,3 +250,18 @@ $(function () {
     $(window).on('resize', showSize);
     showSize();
 });
+$(function() {
+    "use strict";
+    $.ajax({
+      data: someData,
+      dataType: 'json',
+      url: '/path/to/script'
+    }).done(function(data) {
+    // If successful
+      console.log(data);
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+    // If fail
+      console.log(textStatus + ': ' + errorThrown);
+    });
+    return false;
+  });

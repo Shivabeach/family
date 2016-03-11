@@ -8,18 +8,18 @@ class Pass extends CI_Controller {
 		
 	}
 
-	function better_crypt($input, $rounds = 10)
+	function better_crypt($input)
 	{
-	  $crypt_options = array(
-		'cost' => $rounds
-	);
-	  return password_hash($input, PASSWORD_BCRYPT, $crypt_options);
-	  }
-
-	  function verify($input)
+		return password_hash($input, PASSWORD_BCRYPT);
+	}
+	
+	function verify($input)
 	  {
 	  	if(password_verify($password_entered, $password_hash)) {
-	  }
+		
+		}
+	}
+
 }
 
 /* End of file pass.php */

@@ -3,8 +3,6 @@
     <h1>The VanHorns</h1>
   </header>
 </div>
-
-
   <div class="container ">
     <div class="box-left">
      <p>Screen</p>

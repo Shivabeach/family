@@ -4,12 +4,12 @@
   </header>
 </div>
 <div class="container">
-  <div class="box-left">
+  <!-- <div class="box-left">
     <p>Screen</p>
      <div id="size"></div>
      <p>Window</p>
      <div id="size2"></div>
-  </div>
+  </div> -->
    <div class="main-content">
     <h1 class="page-title">Beginnings</h1>
     <article class="dnahead">

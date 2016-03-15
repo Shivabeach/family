@@ -1,5 +1,5 @@
-//global $:false
-//window:false
+/*global $:false,
+window:false */
 /* beautify then minify */
 
 $(document).ajaxError(function (e, xhr, settings, error) {
@@ -246,22 +246,23 @@ $(function () {
     function showSize() {
         $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
         $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
+        $('#size3').html('HEIGHT : ' + $('.main-content').height() + '<br>WIDTH : ' + $('.main-content').width());
     }
     $(window).on('resize', showSize);
     showSize();
 });
-$(function() {
-    "use strict";
-    $.ajax({
-      data: someData,
-      dataType: 'json',
-      url: '/path/to/script'
-    }).done(function(data) {
-    // If successful
-      console.log(data);
-    }).fail(function(jqXHR, textStatus, errorThrown) {
-    // If fail
-      console.log(textStatus + ': ' + errorThrown);
-    });
-    return false;
-  });
+// $(function() {
+//     "use strict";
+//     $.ajax({
+//       data: someData,
+//       dataType: 'json',
+//       url: '/path/to/script'
+//     }).done(function(data) {
+//     // If successful
+//       console.log(data);
+//     }).fail(function(jqXHR, textStatus, errorThrown) {
+//     // If fail
+//       console.log(textStatus + ': ' + errorThrown);
+//     });
+//     return false;
+//   });

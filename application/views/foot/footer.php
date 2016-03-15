@@ -6,17 +6,14 @@
                 echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> VanHorn Family.
             </div>
             <div>
-                <?PHP
+  <?PHP
   // Original PHP code by Chirp Internet: www.chirp.com.au
-  // Please acknowledge use of this code by including this header.
-
-
     $input = "P6HBAJ4Zk272SiMU^W/%g^4c8";
     //$crypt_options = array(
      // 'cost' => 10
    // );
     echo password_hash($input, PASSWORD_BCRYPT);
-?>
+  ?>
 
             </div>
 </footer>

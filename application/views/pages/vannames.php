@@ -5,10 +5,10 @@
 </div>
 <div class="container">
   
-  <section class="flex-one item">
+  <div class="main-content">
     <h1 id="tips" class="page-title">VanHorn Ancestral Names</h1>
 
-    <article>
+    
       <h2>Names!</h2>
       <p>
         These are names from verified relatives for which we have the complete chain of births in common with a cousin. Simply click on a name or year to put that name in the search box to the right. Then click search.
@@ -22,14 +22,9 @@
       }
     ?>
       </ul>
-    </article>
-
-  </section>
-
-  <section class="flex-two item">
+    </div>
+  <div class="box-right">
     <h1>Search</h1>
-    <article>
-      <h3>Pick a Name</h3>
      <p>Pick a name from the column on the left and search</p>
      <?php echo validation_errors(); ?>
      <?php 
@@ -55,17 +50,16 @@
       $attr2 = [
         'id' => 'clear',
         'value' => 'Clear All',
-        'type' => 'button',
+        'type' => 'reset',
         'class' => 'pure-button'
       ];
       echo form_reset($attr2);
       echo form_close();
      ?>
-    </article>
     <article id="display"></article>
-  </section>
+  </div>
 </div>
-<div class="container">
+<!-- <div class="container">
   <footer class="flex-four">
     <h3>Footnotes</h3>
     <ul>
@@ -74,3 +68,5 @@
   </ul>
   </footer>
 </div>
+ -->
+ 

@@ -5,17 +5,18 @@
 </div>
 
 <div class="container ">
-	<div class="box-left">
+	<!-- <div class="box-left">
      <p>Screen</p>
      <div id="size"></div>
      <p>Window</p>
-     <div id="size2"></div>
-     
-    </div>
+     <div id="size2"></div>     
+  </div> -->
      <div class="main-content">
       <article>
+      <div id="size3"></div>
         <h2>Our Heredity</h2>
         <p> Where we are from in the last 1000 years or so!
+
         <blockquote>
           <ul>
             <li>65% of our ancestry comes from Great Britain, with outliers from Scotland, France and the Netherlands</li>

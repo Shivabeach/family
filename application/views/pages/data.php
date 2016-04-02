@@ -1,11 +1,12 @@
-<div class="container">
+  <div class="container-top">
   <header class="labels">
     <h1>The VanHorns Relatives</h1>
   </header>
 </div>
 <div class="container">
   
-  <section class="flex-one item">
+ <div class="main-content">
+
     <article>
         <p>I have broken the family down into 4 divisions. That being the VanHorns, Hunts, Reeds and Bosticks. The four family lines represent our parents mothers and fathers.</p>
         <p>I thought it would be nice to see what names comprise our backgrounds. And also from what countrys these names come from.</p>
@@ -65,18 +66,11 @@
       </ul>
     </article>
 </article>
-  </section>
+  </div>
 
   
 </div>
 <div class="container">
-  <footer class="flex-four">
-    <h3>Footnotes</h3>
-    <ul>
-    <li><sub>1</sub> link 1 <li>
-    <li><sub>2</sub> link 2</li>
-  </ul>
-  </footer>
 </div>
 </body>
 </html>

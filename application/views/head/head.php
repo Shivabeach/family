@@ -14,3 +14,4 @@
 		<script src="<?php echo base_url('bower_components/jquery/dist/jquery.min.js');?>"></script>
 	</head>
 	<body>
+	

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-top">
   <header class="labels">
     <h1>The VanHorns</h1>
   </header>
@@ -48,7 +48,7 @@
     </div>
 </div>
 <div class="container">
-  <footer class="flex-four">
+  <footer class="main-content">
     <h3>Footnotes</h3>
     <ul>
     <li><sub>1</sub> This information is from <a href="http://archiver.rootsweb.ancestry.com/th/read/NJHUNTER/2010-09/1283444071" rel="external">Marleen Van Horne</a> Van Horne-DNA and the origin of Matthys Cornelissen <li>

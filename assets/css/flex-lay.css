@@ -70,7 +70,6 @@ article.sticky {
   padding: 10px 0;
 }
 article {
-  box-shadow: 1px 5px 5px #355c7d;
   background-color: rgba(255, 255, 255, 0.1);
 }
 article li {
@@ -97,7 +96,6 @@ ul {
   padding: 0;
 }
 ul li {
-  background-color: LightCyan;
   padding-left: 2rem;
 }
 h2 {
@@ -126,10 +124,9 @@ nav li a:hover {
   background-color: #00008B;
 }
 footer {
+  clear: both;
   padding: 10px;
   width: 100%;
-  color: #a7a7a7;
-  background-color: #393939;
 }
 footer li {
   font-size: .75rem;
@@ -139,7 +136,7 @@ footer li a {
   color: red;
 }
 footer li a:hover {
-  color: #fff;
+  color: #250000;
 }
 footer h3 {
   margin: 0 2em;
@@ -255,6 +252,33 @@ aside.sidemenu a:visited {
   max-width: 90%;
   margin: 0 auto;
 }
+.high {
+  height: 75vh;
+}
+.container-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;
+  max-height: 100px;
+}
+.container-bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;
+  height: auto;
+}
 .item p {
   font-size: 1em;
   margin: 8px 20px;
@@ -278,7 +302,7 @@ aside.sidemenu a:visited {
   -webkit-flex: 3;
       -ms-flex: 3;
           flex: 3;
-  border-left: 1px solid #250000;
+  height: auto;
 }
 .box-right {
   background-color: #f67280;

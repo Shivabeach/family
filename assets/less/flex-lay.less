@@ -65,7 +65,6 @@ section article:last-of-type, article.sticky {
 	padding: 10px 0;
 }
 article {
-	box-shadow: 1px 5px 5px #355c7d;
 	background-color: rgba(255,255,255,0.1);
 	li {
 		margin-left: 8px;
@@ -94,7 +93,6 @@ ul {
 	margin: 2rem 0;
 	padding: 0;
 	li {
-		background-color: LightCyan;
 		padding-left: 2rem
 	}
 }
@@ -126,10 +124,9 @@ nav {
 	}
 }
 footer {
+    clear: both;
 	padding: 10px;
 	width: 100%;
-	color: @liteGray;
-	background-color: @darkGray;
 	li {
 	font-size: .75rem;
 	margin: 7px 2em;
@@ -137,7 +134,7 @@ footer {
 			color: red;
 		}
 		a:hover {
-			color: #fff;
+			color: #250000;
 		}
 	}
 	h3 {
@@ -245,8 +242,27 @@ aside.sidemenu {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 90%;
-	margin: 0 auto;
+	margin: 0 auto;    
 }
+.high {
+        height: 75vh;
+    }
+.container-top {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+    max-height: 100px;
+}
+.container-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+    height: auto;
+}
+
+
 .item {
 	p {
 		font-size: 1em;
@@ -266,7 +282,7 @@ aside.sidemenu {
 }
 .main-content {
    flex: 3;
-   border-left: 1px solid #250000;
+   height: auto;
 }
 .box-right {
    background-color: @palette4;

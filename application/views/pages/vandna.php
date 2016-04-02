@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-top">
   <header class="labels">
     <h1>The VanHorn DNA</h1>
   </header>
@@ -159,7 +159,7 @@
     </div>
   </div>
   <div class="container">
-  <footer class="flex-four border">
+  <footer class="main-content">
     <h3>Footnotes</h3>
     <ul>
     <li><sub>1</sub> All information on page from <a href="https://genographic.nationalgeographic.com/" rel="external">The Genographic Project</a> </li>

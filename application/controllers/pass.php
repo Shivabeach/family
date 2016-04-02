@@ -5,7 +5,8 @@ class Pass extends CI_Controller {
 
 	public function index()
 	{
-		
+		$this->load->model("pass_model");
+
 	}
 
 	function better_crypt($input)
@@ -15,7 +16,7 @@ class Pass extends CI_Controller {
 	
 	function verify($input)
 	  {
-	  	if(password_verify($password_entered, $password_hash)) {
+	  	if() {
 		
 		}
 	}

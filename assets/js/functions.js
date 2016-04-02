@@ -116,7 +116,7 @@ $(function() {
 //this is for putting names into a search for on the data.php page
 $(function () {
   "use strict";
-  $('li.tool').on('click', function () { //click on the li. CHANGE TO REFLECT NEW LI
+  $('li.inliner').on('click', function () { //click on the li. CHANGE TO REFLECT NEW LI
     var content = $(this).text();//content is the text that you clicked on
  //PLACE THE TEXT INSIDE THE INPUT FIELD, YOU CAN CHANGE YOUR SELECTOR TO TARGET THE RIGHT INPUT
     $('input[name="name"]').val(content);
@@ -156,7 +156,7 @@ $(function () {
     "use strict";
     $("#tabs").tabs( {
         active: 0,
-        heightStyle: "content",
+        heightStyle: "auto",
         event: "mouseover"
     });
   });

@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container-top">
   <header class="labels">
     <h1>The VanHorn Notes</h1>
   </header>
 </div>
 <div class="container">
-  <section class="flex-one item">
+   <div class="main-content">
     <h1 class="page-title">VanHorn Notes</h1>
     <article>
       <dl>
@@ -18,9 +18,9 @@
         ?>
       </dl>
     </article> 
-  </section>
+  </div>
   
-  <section class="flex-one item">
+   <div class="main-content">
    <h1 class="page-title">Bostick Notes</h1>
    <article>
   	<dl>
@@ -34,6 +34,6 @@
         ?>
     </dl>
    </article>    
-  </section>
+  </div>
   </div>
 

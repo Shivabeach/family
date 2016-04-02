@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-top">
   <header class="labels">
     <h1>The VanHorns TimeLine</h1>
   </header>
@@ -32,6 +32,7 @@
 			<p> First person, along with his brother Cornelius, to use the VanHorn name.
 			<br>VanHorn is a mix of the Dutch prefix Van, and the name of the city in Denmark that Matthys cam from, Horne.
 			<br>Salem Witch Trials in colonial Massachusetts.
+            <br>Started the town of Whitehouse New Jersey
 			</p>			
 			<span class="cd-date">1699</span>
 		</div> <!-- cd-timeline-content -->

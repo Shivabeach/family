@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-top">
   <header class="labels">
     <h1>The VanHorns</h1>
   </header>
@@ -43,7 +43,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container-bottom">
   <footer class="flex-four">
     <h3>Footnotes</h3>
     <ul>

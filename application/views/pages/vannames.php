@@ -1,15 +1,12 @@
-<div class="container">
+  <div class="container-top">
   <header class="labels">
     <h1>The VanHorn Relatives</h1>
   </header>
 </div>
-<div class="container">
-  
-  <div class="main-content">
-    <h1 id="tips" class="page-title">VanHorn Ancestral Names</h1>
-
-    
-      <h2>Names!</h2>
+<div class="container high">
+    <div class="main-content">
+        <h1 id="tips" class="page-title">VanHorn Ancestral Names</h1>
+        <h2>Names!</h2>
       <p>
         These are names from verified relatives for which we have the complete chain of births in common with a cousin. Simply click on a name or year to put that name in the search box to the right. Then click search.
       </p> 
@@ -17,8 +14,8 @@
     <?php
       foreach($folks as $row)
       {
-         echo "<li class='tool' title='Click Me'> $row->male </li>";
-         echo "<li class='tool' title='Click Me'> $row->female </li>";
+         echo "<li class='inliner' title='Click Me'> $row->male </li>";
+         echo "<li class='inliner' title='Click Me'> $row->female </li>";
       }
     ?>
       </ul>

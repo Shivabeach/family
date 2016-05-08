@@ -29,6 +29,7 @@
 	  <li class="line"><?php echo anchor('pages/fam', 'Family Insert');?></li>
     <li class="line"><?php echo anchor('pages/namer', 'Family Names');?></li>
     <li class="line"><?php echo anchor('pages/notes', 'Notes');?></li>
-    <li class="line"><?php echo anchor('pages/datapages', 'Data');?></li>      
+    <li class="line"><?php echo anchor('pages/datapages', 'Data');?></li>    
+    <li class="line"><?php echo anchor('mycal/display', 'Calendar');?></li>  
     </ul>
 </nav>

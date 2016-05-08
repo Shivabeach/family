@@ -22,7 +22,7 @@
     </div>
   <div class="box-right">
     <h1>Search</h1>
-     <p>Pick a name from the column on the left and search</p>
+     <p>Pick a name from the column on the left and search ≡ </p>
      <?php echo validation_errors(); ?>
      <?php 
      $attr = array (

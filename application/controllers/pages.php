@@ -29,7 +29,7 @@ class Pages extends CI_Controller {
 		$this->load->view('admin/family-insert', $data);
 	}
 
-	public function van()
+	public function van()//main vanhorn page
 	{
 		$data['title'] = "VanHorn page";
 		$this->load->view('head/headfam',$data);
@@ -47,7 +47,7 @@ class Pages extends CI_Controller {
 		$this->load->view("foot/footer");
 	}
 
-	public function dat()
+	public function dat() //feeds the 4 family names
 	{
 		$this->db->distinct();
 		$fam = "VanHorn";
@@ -100,8 +100,8 @@ class Pages extends CI_Controller {
 		$data = [];
 		$family = "VanHorn";
 		$family2 = "Bostick";
-		$this->db->select("family, rel_name, note, year")->from("notes")->where("family", $family)->group_by("year");
-		$query = $this->db->get();
+		$this->db->select("family, rel_name, note, year")->where("family", $family)->group_by("year");
+		$query = $this->db->get("notes");
 		if ($query->result()) {
 			$data1['notes'] = $query->result();
 		}
@@ -120,10 +120,10 @@ class Pages extends CI_Controller {
 
 	public function vannames()
 	{
-		$name = "VanHorn";
 		$this->db->distinct();
-		$this->db->select("family, male, female, relationship, year")->from("primary")->where("family", $name)->group_by("year", "asc");
-		$query = $this->db->get();
+        $name = "VanHorn";
+		$this->db->select("family, male, female, relationship, year")->where("family", $name)->order_by("year", "asc");
+		$query = $this->db->get("primary");
 		if ($query->result()) {
 			$data1['folks'] = $query->result();
 		}
@@ -133,7 +133,7 @@ class Pages extends CI_Controller {
 		$this->load->view("pages/vannames", $data1);
 		$this->load->view("foot/footer");
 	}
-	public function bosdna()
+	public function bosdna() //Bostick DNA
 	{
 		$data = [];
 		$data['title'] = "Bostick DNA";

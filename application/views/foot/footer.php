@@ -38,6 +38,6 @@
     });
 });
     </script>
-    <a rel="nofollow" style="display:none;" href="<?php echo base_url('blackhole/');?>">Do NOT follow this link or you will be banned from the site!</a>
+    <a rel="nofollow" style="display:none;" href="<?php echo site_url('blackhole/');?>">Do NOT follow this link or you will be banned from the site!</a>
 </body>
 </html>

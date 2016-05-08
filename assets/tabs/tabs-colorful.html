@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Freebie: 12 Practical Templates For List Pages</title>
+
+    <style>
+        body{
+            padding: 40px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/tabs/tabs-colorful.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <div class="tabs-colorful-icons">
+
+        <ul>
+            <li>
+                <a class="first-tab tab-active" data-index="0" href="#"><i class="fa fa-gift"></i> First tab</a>
+            </li>
+            <li>
+                <a class="second-tab" data-index="1" href="#"><i class="fa fa-tachometer"></i> Second tab</a>
+            </li>
+            <li>
+                <a class="third-tab" data-index="2" href="#"><i class="fa fa-cogs"></i> Third tab</a>
+            </li>
+        </ul>
+
+        <div class="tabs-content-placeholder">
+
+            <div class="tab-content-active">
+                <p>Lorem ipsum dolor ist amet, consectetur adipiscing elit. Suspendisse molestie volutpat consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                <img src="assets/images/pictures/sands-of-life.jpg" alt="Sands of Life">
+            </div>
+
+            <div>
+                <p>Lorem ipsum dolor ist amet, consectetur adipiscing elit. Suspendisse molestie volutpat consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                <img src="assets/images/pictures/colosseum.jpg" alt="Colosseum">
+            </div>
+
+            <div>
+                <p>Lorem ipsum dolor ist amet, consectetur adipiscing elit. Suspendisse molestie volutpat consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                <img src="assets/images/pictures/bahnhoff.jpg" alt="Bahnhoff">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            var widget = $('.tabs-colorful-icons');
+
+            var tabs = widget.find('ul a'),
+                content = widget.find('.tabs-content-placeholder > div');
+
+            tabs.on('click', function (e) {
+
+                e.preventDefault();
+
+                // Get the data-index attribute, and show the matching content div
+
+                var index = $(this).data('index');
+
+                tabs.removeClass('tab-active');
+                content.removeClass('tab-content-active');
+
+                $(this).addClass('tab-active');
+                content.eq(index).addClass('tab-content-active');
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

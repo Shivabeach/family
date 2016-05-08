@@ -5,7 +5,7 @@
   </header>
 </div>
 <div class="container">
-	<section class="flex-one item">
+	<div class="main-content">
     <h1 id="tips" class="page-title">Family Names Enter</h1>
 
     <article>
@@ -16,10 +16,6 @@
       
     </article>
 	<article class="form">
-		<p id="display">
-			<?php echo validation_errors(); ?>
-		</p>
-
 		<?php
 			$attr = [
 			"id" => "ajax",
@@ -54,10 +50,52 @@
 			echo form_close();
 		?>
 	</article>
-	<article>
-		<p>Response</p>
-		
+	
+    <article class="form">
+        <h3>Full names and familys</h3>
+        <?php
+            $attr = [
+            "id"    => "ajax",
+            'class' => "pure-form pure-form-aligned"
+            ];
+            echo form_open('forms/full_names', $attr);
 
-	</article>
-  </section>
-</div>
+            $attr1 = [
+                "id"          => "male",
+                "style"       => "width: 50%",
+                "maxlength"   => "40",
+                "name"        => "male",
+                "placeholder" => "Male"
+                ];
+            echo "<div class = 'pure-control-group'>";
+            echo '<label for="male">Male</label>';
+            echo form_input($attr1);
+            echo "</div>";
+
+            $attr2 = [
+                "id"          => "female",
+                "style"       => "width: 50%",
+                "maxlength"   => "40",
+                "name"        => "female",
+                "placeholder" => "Female"
+            ];
+            echo "<div class = 'pure-control-group'>";
+            echo '<label for="female">Female</label>';
+            echo form_input($attr2);
+            echo "</div>";
+
+
+
+
+        ?>
+    </article>
+  </div>
+  <div class="box-right">
+    <article class="form">
+        <p>Response</p>
+    </article>
+    <p id="display">
+        <?php echo validation_errors(); ?>
+    </p>
+  </div>
+</div> <!-- end of main stuff -->

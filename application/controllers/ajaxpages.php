@@ -50,7 +50,7 @@ class Ajaxpages extends CI_Controller {
 			</tr>";
 		foreach($query->result() as $row)
 		{
-			echo "<tr>
+			echo "<tr class='stripes'>
 				<td>$row->Country </td>
 				<td>$row->Number</td>
 				</tr>";

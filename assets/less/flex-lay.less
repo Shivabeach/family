@@ -1,8 +1,8 @@
 @import (less) url("colors.less");
 @import (css) url("typo-dist.css");
 @import (css) url("fonts-dist.css");
-@import (css) url("http://localhost/family/bower_components/hover/css/hover.css");
-@import (css) url("http://localhost/family/bower_components/font-awesome/css/font-awesome.css");
+@import (css) url("../../bower_components/hover/css/hover.css");
+@import (css) url("../../bower_components/font-awesome/css/font-awesome.css");
 @large-desktop:1280px;
 @small-desktop:992px;
 @tablet:768px;
@@ -16,14 +16,16 @@ body, html {
 	height: 100vh;
 	margin: 0;
 	padding: 0;
-	background-image: url('../img/white.jpg');
-	background-color: @palette4;
+	//background-image: url('../img/white.jpg');
+	background-color: @vintage4;
+    background-blend-mode: difference;
 	font-family: georgia;
 	line-height: 1.5;
 	-moz-osx-font-smoothing: grayscale;
   	-webkit-font-smoothing: antialiased;
   	text-rendering: optimizeLegibility;
   	transition: all 300ms ease;
+    overflow: auto;
 }
 header {
 	width: 100%;
@@ -31,8 +33,10 @@ header {
 	align-items: center;
 	h1 {
 		text-align: center;
-		font-family: 'england_hand_dbregular';
-		font-size: 4rem;
+        font-family: 'soriasoria';
+        //font-family:'sequel';
+		//font-family: 'england_hand_dbregular';
+		font-size: 4.5rem;
 		margin: 0;
 		width: 100%;
 		color: Pantone #de007d;
@@ -65,7 +69,6 @@ section article:last-of-type, article.sticky {
 	padding: 10px 0;
 }
 article {
-	background-color: rgba(255,255,255,0.1);
 	li {
 		margin-left: 8px;
 	}
@@ -97,8 +100,10 @@ ul {
 	}
 }
 
-h2 {
+article h2 {
 	width: 100%;
+    font-family:'sequel';
+    //font-family: 'tanglewood_tales_nfregular';
 }
 /*-------------------------------------
 	Nav
@@ -174,7 +179,9 @@ button:hover {
 /*	=============================================================================================================
 	classes
 ==============================================================================================================*/
-
+.page-title {
+    color: @vintage3;
+}
 hr.half {
 	width: 50%;
 	text-align: center;
@@ -201,6 +208,7 @@ nav a.current {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+    font-family: 'tanglewood_tales_nfregular';
 }
 
 .dnahead {
@@ -217,7 +225,6 @@ aside.sidemenu {
 	text-align: left;
 	border-radius: 5px;
 	border: 1px solid gray;
-	background-color: @dnahead;
 	li {
 		padding-left: 20px;
 		margin: 5px;
@@ -272,9 +279,9 @@ aside.sidemenu {
 		font-size: 1em;
 	}
 }
-.papaya {
-	background-color: #E8C6B6;
-}
+// .papaya {
+// 	background-color: #E8C6B6;
+// }
 .box-left {
 	max-width: 200px;
     flex: 1;
@@ -285,8 +292,11 @@ aside.sidemenu {
    height: auto;
 }
 .box-right {
-   background-color: @palette4;
+   // background-color: @palette4;
    flex: 1;
+   h1 {
+    color: @vintage5;
+   }
     }
 .flex-three {
 
@@ -333,10 +343,9 @@ aside.sidemenu {
     	justify-content: center;
     }
 }
-
-.papaya {
-	background-color: #E8C6B6;
-}
+// .papaya {
+// 	background-color: #E8C6B6;
+// }
 
 .blend {
 	background-image: linear-gradient(90deg, rgb(231, 76, 60) 25%, rgb(230, 126, 34) 100%);
@@ -379,12 +388,20 @@ Modal buttons
     align-items: center; /* center text vertically (in this case) */
     justify-content: center;
 }
+/*Tables */
 #country {
 	font-size: 1em;
 	font-family: arial;
 	td {
 		text-align: center;
 	}
+}
+
+.stripe {
+    background-color: lighten(@vintage4, 30%);
+}
+.stripe1 {
+    background-color: darken(@vintage4, 30%);
 }
 
  @media screen and (max-width: 810px) {
@@ -419,4 +436,59 @@ Modal buttons
         	display: none;
         }
     }
-
+/*
+--------------------------------------------------------------------Calendar
+ */
+.calendar {
+    width: 90%;
+    margin:5px auto;
+}
+table.calendar {
+    margin: 10px auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+.calendar .days td {
+    width: 80px;
+    height: 130px;
+    padding: 4px;
+    border: 1px solid #999;
+    vertical-align: top;
+    background-color: rgba(255,  255,  255,  0.9);
+    font-size: 90%;
+}
+.calendar .days td:hover {
+    background-color: #FFF;
+    -moz-transform: scale(1.05) rotate(0deg) translate(0px,  0px) skew(0deg,  0deg);
+    -webkit-transform: scale(1.05) rotate(0deg) translate(0px,  0px) skew(0deg,  0deg);
+    -o-transform: scale(1.05) rotate(0deg) translate(0px,  0px) skew(0deg,  0deg);
+    -ms-transform: scale(1.05) rotate(0deg) translate(0px,  0px) skew(0deg,  0deg);
+    transform: scale(1.05) rotate(0deg) translate(0px,  0px) skew(0deg,  0deg);
+}
+.calendar .highlight {
+    font-weight: bold;
+    color: #00F;
+}
+th {
+    font-size: 225%;
+    color: @vintage3;
+}
+.wk {
+    color: white;
+    text-align: center;
+    font-family: 'Atomic Age', cursive;
+    font-size: 120%;
+}
+nav {
+    background-color: black;
+    width: 100%;
+    height: 45px;
+}
+nav li {
+    display: inline;
+    padding: 3px 8px;
+    margin: 0 5px;
+}
+.day_num {
+    font-family: 'Geostar Fill', cursive;
+}

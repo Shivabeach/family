@@ -185,6 +185,7 @@ $(window).on('scroll', function(){
         }
     });
   });
+// controller ajaxpages - page datapages
 $(function() {
     "use strict";
     $( '.rel_count' ).on('click', function() {
@@ -198,7 +199,7 @@ $(function() {
        return false;
     });
 });
-
+// controller ajaxpages - page datapages
 $(function() {
     "use strict";
     $( '.ages' ).on('click', function() {
@@ -212,21 +213,21 @@ $(function() {
        return false;
    });
 });
-
-$(function() {
+// controller ajaxpages - page datapages
+$(function() { 
     "use strict";
     $( '.level' ).on('click', function() {
        $.ajax({
         type: "get",
         url: "../ajaxpages/level",
         success: function (mesg) {
-            $('.display3').html(mesg);
+            $('.display3').html(mesg).delay('9000').fadeOut('9000');
             }
         });
        return false;
    });
 });
-
+// controller ajaxpages - page datapages
 $(function() {
     "use strict";
     $( '.country' ).on('click', function() {
@@ -234,7 +235,7 @@ $(function() {
         type: "get",
         url: "../ajaxpages/country",
         success: function (mesg) {
-            $('.display4').fadeIn('2000').html(mesg);
+            $('.display4').fadeIn('2000').html(mesg).delay('19000').fadeOut('5000');
             }
         });
        return false;
@@ -266,3 +267,7 @@ $(function () {
 //     });
 //     return false;
 //   });
+$(function () {
+    $("tr.stripes:even").addClass("stripe");
+    $("tr.stripes:odd").addClass("stripe1");
+});

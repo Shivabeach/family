@@ -153,6 +153,7 @@ if (!$ipaddress || !preg_match("/^[\w\d\.\-]+\.[\w\d]{1,4}$/i", $ipaddress)) {
 
 
 
+
 // whitelist bots
 if (preg_match("/(aolbuild|bingbot|bingpreview|msnbot|duckduckgo|adsbot-google|googlebot|mediapartners-google|teoma|slurp|yandex)/i", $useragent)) {
 	header('Location: /', true, 302);

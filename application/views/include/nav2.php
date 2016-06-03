@@ -31,5 +31,8 @@
     <li class="line"><?php echo anchor('pages/notes', 'Notes');?></li>
     <li class="line"><?php echo anchor('pages/datapages', 'Data');?></li>    
     <li class="line"><?php echo anchor('mycal/display', 'Calendar');?></li>  
+    <li class="line"><?php echo anchor('test/', 'Test');?></li>
+    <li class="line"><?php echo anchor('pages/style', 'Style');?></li>
+    <li class="line"><?php echo anchor('pages/military', 'Military');?></li>
     </ul>
 </nav>

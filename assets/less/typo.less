@@ -5,9 +5,10 @@ h1 {
   line-height: 1.5;
 }
 h2 {
-  font-size: 1.5rem;//19px
+  font-size: 1.75rem;//19px
   margin: .75em 5px;
   line-height: 1.4;
+  color: gray;
 }
 h3 {
   font-size: 1.17rem;
@@ -33,7 +34,11 @@ h6 {
 }
 
 p {
-  margin: 5px 0;
+  line-height: 1.6;
+  color: darken(@darkGray, 10%);
+  .sidenotes {
+    font-size: .8em;
+  }
 }
 
 abbr[title] {
@@ -99,6 +104,7 @@ samp {
 
 .error {
   color: white;
-  background: #250000;
-  font-size: 2em;
+  background: tomato;
+  font-size: 1.5em;
+  border-radius: 5px;
 }

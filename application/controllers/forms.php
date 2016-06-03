@@ -95,8 +95,45 @@ class Forms extends CI_Controller {
 			$this->db->insert('names', $data);
 			echo "grand shit";
 		}
-
 	}
+
+    public function full_names()
+    {
+        $data = [
+            'family'   => htmlspecialchars(trim($this->input->post('family'))),
+            'man'      => htmlspecialchars(trim($this->input->post('man'))),
+            'woman'    => htmlspecialchars(trim($this->input->post('woman'))),
+            'year'     => htmlspecialchars(trim($this->input->post('year'))),
+            'state'    => htmlspecialchars(trim($this->input->post('state'))),
+            'kids'     => htmlspecialchars(trim($this->input->post('kids'))),
+            'relation' => htmlspecialchars(trim($this->input->post('relation')))
+        ];
+        $this->form_validation->set_rules('family', 'Family', 'required');
+        $this->form_validation->set_rules('man', 'Man', 'required');
+        $this->form_validation->set_rules('woman', 'Woman', 'required');
+        $this->form_validation->set_rules('year', 'Year', 'required|numeric|max_length[4]');
+        $this->form_validation->set_rules('state', 'State', 'required|max_length[15]');
+        $this->form_validation->set_rules('kids', 'Kids', 'required|numeric');
+        $this->form_validation->set_rules('relation', 'relation', 'max_length[50]');
+        if( $this->form_validation->run() == false) {
+            echo validation_errors();
+        }else {
+            $this->db->insert('history', $data);
+            echo $family   = htmlspecialchars(trim($this->input->post('family')));
+            echo "<br>";
+            echo $man      = htmlspecialchars(trim($this->input->post('man')));
+            echo "<br>";
+            echo $woman    = htmlspecialchars(trim($this->input->post('woman')));
+            echo "<br>";
+            echo $year     = htmlspecialchars(trim($this->input->post('year')));
+            echo "<br>";
+            echo $state    = htmlspecialchars(trim($this->input->post('state')));
+            echo "<br>";
+            echo $kids     = htmlspecialchars(trim($this->input->post('kids')));
+            echo "<br>";
+            echo $relation = htmlspecialchars(trim($this->input->post('relation')));
+        }
+    }
 }//END OF CONTROLLER
 /* End of file forms.php */
 /* Location: ./application/controllers/forms.php */

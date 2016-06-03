@@ -13,7 +13,7 @@
   </div> -->
      <div class="main-content">
       <article>
-      <div id="size3"></div>
+      
         <h2>Our Heredity</h2>
         <p> Where we are from in the last 1000 years or so!
 
@@ -34,17 +34,52 @@
 				<article>
 	                <?php echo "<h2> $row->title</h2>";?>
 	                <?php echo $this->typography->auto_typography($row->content);?>
-	                <p>Created <?php echo $row->date;?></p>
+	                <p class="end">Created <?php echo $row->date;?></p>
         </article>
         	<?php endforeach;?>
 		</div>
     <div class="box-right">
-      box right
+      <h2>Relatives Notes</h2>
+      <article>
+          <h3>Robert "The Smythe" Pease</h3>
+          <h4>1485 - 1547, 13th great-grandfather</h4>
+          <p class="sidenotes">
+              Robert lived through these historical events:<br>
+                1483-1485: Reign of King Richard III (York) <br>
+                1485-1509: Reign of King Henry VII (Tudor) <br>
+                1492: Columbus discovers the New World (age 7) <br>
+                1509-1547: Reign of King Henry VIII (Tudor) and his 6 wives <br>
+                1513: Henry VIII invaded France <br>
+                1513: Scotland's James IV invaded England but were defeated. <br>
+                1522: Magellan circumnavigates the world <br>
+                1533: Henry VIII married Anne Boleyn and broke from the Catholic Church. Parliament passed the First Act of Secession and all adults in the kingdom had to agree to it by an oath or face imprisonment for life. Several were beheaded. The Church of England did not give freedom to the Protestant Reformers. Robert Pease was abt 48. <br>
+                1547: Robert Pease died the year Henry VIII died.
+          </p>
+      </article>
+      <article>
+          <h3>Alonzo A Bostick</h3>
+          <h4>1841 - 1920, great-grandfather</h4>
+          <h4>Lapeer Days</h4>
+          <p class="sidenotes">
+              On Aug. 28, 1901, Alonzo A. Bostick and his son Austin celebrated the grand opening of Bostick Stove Works in Lapeer. Neither Alonzo nor his son could have foreseen the legacy they bestowed on our community. The simple grand opening celebration inspired the idea of a community festival held for the first time the following year. The Lapeer Days Festival was born. From simple beginning’s it has grown over the years to become the county’s largest festival and Michigan’s largest FREE festival!
+          </p>
+      </article>
+      <article>
+          <h3>John "The Clothier" Pease</h3>
+          <h4>1640 - 1616, 11th great-grandfather</h4>
+          <p class="sidenotes">
+              He lived during tumultuous times in England. <br>
+              He lived through the reigns of Henry VIII, Edward VI, (Bloody) Mary I, Elizabeth I (he was age 18-63), and James I. <br>
+              He was 71 in 1611 when the King James Bible was published. <br>
+              He was 72 in 1612 when the last burning of heretics in England was recorded.
+          </p>
+      </article>
     </div>
 </div>
 
 <div class="container-bottom">
   <footer class="flex-four">
+  <div id="size3"></div>
     <h3>Footnotes</h3>
     <ul>
     	<li><sub>1</sub>*<li>

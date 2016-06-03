@@ -1,8 +1,8 @@
-  <div class="container-top">
+  <!-- <div class="container-top">
   <header class="labels">
     <h1>The VanHorns Relatives</h1>
   </header>
-</div>
+</div> -->
 <div class="container">
   
  <div class="main-content">
@@ -29,10 +29,7 @@
     <h3>VanHorn</h3>
     <ul>
       <?php 
-        foreach($folks as $row):?>
-          <li class="inliner "><?php echo $row->name, nbs(2) ;?></li>
-          
-      <?php endforeach;?>
+        c
       </ul>
     </article>
     <article id="tabs-2">

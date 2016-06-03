@@ -109,8 +109,11 @@ $(function() {
     "use strict";
     $('A[rel="external"]')
     .click( function() {
-    window.open( $(this).attr('href') );
+    window.open( $(this).attr('href'),
+    rel="noopener noreferrer");
     return false;
+    var newWnd = window.open();
+    newWnd.opener = null;
     });
 });
 //this is for putting names into a search for on the data.php page
@@ -214,7 +217,7 @@ $(function() {
    });
 });
 // controller ajaxpages - page datapages
-$(function() { 
+$(function(){
     "use strict";
     $( '.level' ).on('click', function() {
        $.ajax({
@@ -270,4 +273,73 @@ $(function () {
 $(function () {
     $("tr.stripes:even").addClass("stripe");
     $("tr.stripes:odd").addClass("stripe1");
+});
+
+$(function () {
+    'use strict';
+    $(".check").validate({
+        rules:{
+            man: {
+                required: true,
+                minlength: 5
+            },
+            woman: {
+                required: true,
+                minlength: 3
+            },
+            year: {
+                required: true,
+                digit: true,
+                maxlength: 4,
+                minlength: 4
+            },
+            state: {
+                required: true,
+                maxlength: 15
+            },
+            kids: {
+                required: true,
+                digit: true,
+                maxlength: 2,
+                minlength: 1
+            },
+            family: {
+                required: true
+            },
+            relation: {
+                maxlength: 50,
+                minlength: 15
+            }
+        },
+        messages: {
+            man: {
+                required: "Field Required",
+                minlength: "5 of them please"
+            },
+            woman: {
+                required: "Field Required",
+                minlength: "5 of them please"
+            },
+            year: {
+                required: "Field required",
+                digit: "Digits only"
+            },
+            state: {
+                required: "Field required",
+                maxlength: "Answer too long"
+            },
+            kids: {
+                required: "Field required",
+                digit: "Gotta be numbers",
+                maxlength: "Post too long",
+            },
+            family: {
+                required: "This field required"
+            },
+            relation: {
+                maxlength: "Seems a bit long eh?",
+                minlength: "a bit short today?"
+            }
+        }
+    });
 });

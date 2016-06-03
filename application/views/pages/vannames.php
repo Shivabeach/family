@@ -1,8 +1,8 @@
-  <div class="container-top">
+  <!-- <div class="container-top" id="top">
   <header class="labels">
     <h1>The VanHorn Relatives</h1>
   </header>
-</div>
+  </div> -->
 <div class="container high">
     <div class="main-content">
         <h1 id="tips" class="page-title">VanHorn Ancestral Names</h1>

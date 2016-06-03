@@ -4,16 +4,10 @@
   </header>
 </div>
   <div class="container ">
-    <div class="box-left">
-     <p>Screen</p>
-     <div id="size"></div>
-     <p>Window</p>
-     <div id="size2"></div>
-    </div>
     <div class="main-content">
       <h1 class="page-title">Beginnings</h1>
     <article>
-      <h3>Denmark!</h3>
+      <h3>Denmark</h3>
       <p>
         In the year 1640 or there abouts, in Jutland Denmark, a man named Matthys Corneliussen was born. Nothing is known about his parents or his life in general there. He immigrated to the US, arriving at New Netherlands in 1663.  This is where the VanHorn family begins. Had he never immigrated, we would not be here today. A great example of for every action there is a result.
       </p>
@@ -58,4 +52,10 @@
       Information on Abraham VanHorne taken from <a href="http://wc.rootsweb.ancestry.com/cgi-bin/igm.cgi?op=GET&db=kings-highway&id=I81737" rel="external">Kings Highway</a></li>
   </ul>
   </footer>
+   <div class="box-left">
+     <p>Screen</p>
+     <div id="size"></div>
+     <p>Window</p>
+     <div id="size2"></div>
+    </div>
 </div>

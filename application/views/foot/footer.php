@@ -14,6 +14,8 @@
    // );
     echo password_hash($input, PASSWORD_BCRYPT);
   ?>
+  <br>
+  <?php echo random_string('alnum', 16);?>
 
             </div>
 </footer>
@@ -27,6 +29,12 @@
 
     <script src="<?php echo base_url('assets/js/functions.min.js');?>"></script>
     <script src="<?php echo base_url('assets/js/main.js');?>"></script>
+    <script>
+      jQuery.validator.setDefaults({
+      debug: true,
+      success: "valid"
+    });
+</script>
 
     <script>
         $(window).on('scroll', function(){

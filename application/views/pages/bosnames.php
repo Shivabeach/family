@@ -5,7 +5,7 @@
 </div>
 <div class="container">
 
-  <section class="flex-one item">
+  <div class="main-content">
     <h1 id="tips" class="page-title">Bostick Ancestral Names</h1>
 
     <article>
@@ -17,16 +17,16 @@
     <?php
       foreach($folks as $row)
       {
-        echo "<li class='tool' title='Click Me'> $row->male </li>";
-        echo "<li class='tool' title='Click Me'> $row->female </li>";
+        echo "<li class='inliner' title='Click Me'> $row->male </li>";
+        echo "<li class='inliner' title='Click Me'> $row->female </li>";
        }
     ?>
       </ul>
     </article>
 
-  </section>
+  </div>>
 
-  <section class="flex-two item">
+  <div class="box-right">
     <h1>Search</h1>
     <article>
       <h3>Pick a Name</h3>
@@ -54,9 +54,9 @@
      ?>
     </article>
     <article id="display"></article>
-  </section>
+  </div>
 </div>
-<div class="container">
+<!-- <div class="container">
   <footer class="flex-four">
     <h3>Footnotes</h3>
     <ul>
@@ -64,4 +64,4 @@
     <li><sub>2</sub> link 2</li>
   </ul>
   </footer>
-</div>
+</div> -->

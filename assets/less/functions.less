@@ -1,0 +1,23 @@
+//out: dist/functions.css, compress: true, strictMath: true
+
+@iterations: 6;
+
+.h(@index) when (@index > 0) {
+h@{index} {
+        color: #de007d - @index*10;
+}
+.h(@index - 1);
+}
+.h(0) {}
+.h(@iterations);
+
+// @iterations: 6;
+
+//  .h(@index) when (@index > 0) {
+//  h@{index} {
+//          font-size: 72px - @index*10;
+//  }
+//  .h(@index - 1);
+//  }
+//  .h(0) {}
+//  .h(@iterations);

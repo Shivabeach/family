@@ -27,12 +27,12 @@ body, html {
   	transition: all 300ms ease;
     overflow: auto;
 }
+
 header {
 	width: 100%;
 	min-height: 100px !important;
-	align-items: center;
 	h1 {
-		text-align: center;
+		.center;
         font-family: 'soriasoria';
         //font-family:'sequel';
 		//font-family: 'england_hand_dbregular';
@@ -42,14 +42,6 @@ header {
 		color: Pantone #de007d;
 		text-shadow: 1px 1px 3px Tomato,-1px -1px 3px darken(@blue, 30%);
 	}
-}
-
-h3 {
-	margin-left: 20px;
-}
-
-p {
-	color: @palette1;
 }
 
 section>h1 {
@@ -79,8 +71,18 @@ article {
 		padding-bottom: 10px;
 	}
 	p {
-		padding-left: 1rem;
+		padding: 0 1rem;
+        line-height: 1.6;
+        font-size: 1.25rem;
 	}
+    legend {
+        border:2px solid brown;
+        padding: 3px 20px;
+        margin-left: 20px;
+    }
+    fieldset {
+        border: 2px solid brown;
+    }
 }
 article:last-of-type {
 	box-shadow: none;
@@ -96,7 +98,7 @@ ul {
 	margin: 2rem 0;
 	padding: 0;
 	li {
-		padding-left: 2rem
+		padding-left: 1rem;
 	}
 }
 
@@ -109,12 +111,12 @@ article h2 {
 	Nav
 -------------------------------------*/
 nav {
-	height: 3.5em;
+	height: 3.8em;
 	width: 100%;
 	background-color: #bdd2ff;
 	//position: fixed;
 	clear: both;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 	li {
 		display: inline;
 		a {
@@ -149,7 +151,7 @@ footer {
 blockquote {
 	margin-left: 3rem;
 	padding: 5px;
-	border-left: 3px inset @palette4;	
+	border-left: 3px inset @palette4;
 }
 
 dd {
@@ -205,14 +207,16 @@ nav a.current {
   color:white;
 }
 .page-title {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	.center;
+    font-size: 3rem;
     font-family: 'tanglewood_tales_nfregular';
 }
 
 .dnahead {
 	background-color: @dnahead;
+    p {
+        font-size: 1.4em;
+    }
 }
 .dnablock {
 	background-color: @dnablock;
@@ -249,7 +253,7 @@ aside.sidemenu {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 90%;
-	margin: 0 auto;    
+	margin: 0 auto;
 }
 .high {
         height: 75vh;
@@ -294,10 +298,24 @@ aside.sidemenu {
 .box-right {
    // background-color: @palette4;
    flex: 1;
+   border: 1px solid #250000;
    h1 {
     color: @vintage5;
    }
+   p.sidenotes {
+    font-size: .85em;
     }
+   h2,h3,h4 {
+    margin-left:.5rem;
+    margin-right: .5rem;
+    }
+    h3 {
+        border-bottom: 1px solid @vintage5;
+    }
+    br {
+        margin: 3px 0;
+    }
+ }
 .flex-three {
 
 }
@@ -388,6 +406,14 @@ Modal buttons
     align-items: center; /* center text vertically (in this case) */
     justify-content: center;
 }
+.end {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: end;
+  color: @vintage5;
+}
 /*Tables */
 #country {
 	font-size: 1em;
@@ -404,8 +430,13 @@ Modal buttons
     background-color: darken(@vintage4, 30%);
 }
 
+table {
+    width: 80%;
+    margin: 0 auto;
+}
+
  @media screen and (max-width: 810px) {
-        .wrapper {
+        .container {
             display: flex;
             flex-wrap: wrap;
         }
@@ -435,7 +466,21 @@ Modal buttons
         .flex-four {
         	display: none;
         }
+        header h1 {
+            display:none;
+            font-size: 2rem;
+            text-align: left;
+        }
+        .container-top {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 90%;
+        margin: 0 auto;
     }
+    #top {
+        display: none;
+    }
+ }
 /*
 --------------------------------------------------------------------Calendar
  */
@@ -482,7 +527,7 @@ th {
 nav {
     background-color: black;
     width: 100%;
-    height: 45px;
+    height: 50px;
 }
 nav li {
     display: inline;

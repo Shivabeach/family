@@ -1,8 +1,8 @@
-<div class="container-top">
+<!-- <div class="container-top">
   <header class="labels">
     <h1>The VanHorns TimeLine</h1>
   </header>
-</div>
+</div> -->
 <div class="container">  
   <section class="flex-one item">
     <article>

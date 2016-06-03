@@ -184,7 +184,21 @@ class Pages extends CI_Controller {
 		$this->load->view("pages/data_page");
 		$this->load->view("foot/footer");
 	}
-
+    function style()
+    {
+        $this->load->view("pages/styleguide");
+    }
+    /**
+     * undocumented function
+     *
+     * @return void
+     * @author
+     **/
+    public function military()
+    {
+        $data['title'] = "Military Service";
+        $this->load->view("pages/military", $data);
+    }
 
 }
 

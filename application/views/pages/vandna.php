@@ -1,9 +1,9 @@
-<div class="container-top">
+<!-- <div class="container-top">
   <header class="labels">
     <h1>The VanHorn DNA</h1>
   </header>
-</div>
-<div class="container">
+</div> -->
+<div class="container" id="top">
   <!-- <div class="box-left">
     <p>Screen</p>
      <div id="size"></div>

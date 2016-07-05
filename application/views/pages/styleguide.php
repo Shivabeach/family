@@ -40,8 +40,15 @@
     <div class="box-right">
     <p>box-right flex 1</p>
     <a href="#"> Styleguide</a>
-
-
+    <hr>
+    <p class="air">Sir Family History</p>
+    <p class="bitter">Bitter Family History</p>
+    
+    <p class="england">England Family History</p>
+    <p class="hallo">Hallo Family History</p>
+    <p class="soria">Soria Family History</p>
+    <p class="tangle">Tangle Family History</p>
+    
     <h1>Search</h1>
     </div>
 </body>

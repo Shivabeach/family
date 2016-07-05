@@ -12,26 +12,18 @@
     <div class="container">
         <div class="main-content">
             <h3>Military</h3>
-            <table class="pure-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Military</th>
-                    <th>Enlistment</th>
-                    <th>War</th>
-                    <th>Country</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Don VanHorn</td>
-                    <td>Air Corps</td>
-                    <td>Dec 10, 1942</td>
-                    <td>WW2</td>
-                    <td>US</td>
-                </tr>
-            </tbody>
-            </table>
+            <?php
+                foreach($army as $row)
+                {
+                    $this->table->add_row(
+                        $row->name,
+                        $row->military,
+                        $row->war,
+                        $row->country 
+                        );
+                }
+                echo $this->table->generate();
+            ?>
         </div>
         <div class="box-right">
             <p>right box</p>

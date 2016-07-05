@@ -14,8 +14,10 @@
     <?php
       foreach($folks as $row)
       {
-         echo "<li class='inliner' title='Click Me'> $row->male </li>";
-         echo "<li class='inliner' title='Click Me'> $row->female </li>";
+        $male = trim($row->male);
+        $female = trim($row->female);
+         echo "<li class='inliner' title='Click Me'> $male </li>";
+         echo "<li class='inliner' title='Click Me'> $female </li>";
       }
     ?>
       </ul>

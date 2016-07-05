@@ -29,7 +29,11 @@
     <h3>VanHorn</h3>
     <ul>
       <?php 
-        c
+      foreach($folks as $row):?>
+          <li class="inliner"><?php echo $row->name, nbs(2) ;?></li>
+          
+      <?php endforeach;?>
+      ?>
       </ul>
     </article>
     <article id="tabs-2">

@@ -49,7 +49,9 @@ class Forms extends CI_Controller {
 	{
 
 	}
-
+    /*
+    search for relatives and their info on the name pages
+     */
 	public function relative_search()
 	{
 		$seek = htmlspecialchars(trim($this->input->post('name')));

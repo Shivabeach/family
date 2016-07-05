@@ -1,6 +1,7 @@
 @import (less) url("colors.less");
 @import (css) url("typo-dist.css");
 @import (css) url("fonts-dist.css");
+@import (css) url("media-dist.css");
 @import (css) url("../../bower_components/hover/css/hover.css");
 @import (css) url("../../bower_components/font-awesome/css/font-awesome.css");
 @large-desktop:1280px;
@@ -8,9 +9,6 @@
 @tablet:768px;
 @mobile:480px;
 /* Forms reference http://purecss.io/forms/ */
-html {
-	box-sizing: border-box;
-}
 
 body, html {
 	height: 100vh;
@@ -20,19 +18,19 @@ body, html {
 	background-color: @vintage4;
     background-blend-mode: difference;
 	font-family: georgia;
-	line-height: 1.5;
+	line-height: 1.618;
 	-moz-osx-font-smoothing: grayscale;
   	-webkit-font-smoothing: antialiased;
   	text-rendering: optimizeLegibility;
   	transition: all 300ms ease;
     overflow: auto;
+    box-sizing: border-box;
 }
 
 header {
 	width: 100%;
 	min-height: 100px !important;
 	h1 {
-		.center;
         font-family: 'soriasoria';
         //font-family:'sequel';
 		//font-family: 'england_hand_dbregular';
@@ -41,6 +39,7 @@ header {
 		width: 100%;
 		color: Pantone #de007d;
 		text-shadow: 1px 1px 3px Tomato,-1px -1px 3px darken(@blue, 30%);
+        .center;
 	}
 }
 
@@ -84,6 +83,12 @@ article {
         border: 2px solid brown;
     }
 }
+article p:first-of-type::first-letter {
+        font-size: 3em;
+        margin:10px 5px 0 5px;
+        line-height: 1;
+    }
+
 article:last-of-type {
 	box-shadow: none;
 }
@@ -95,10 +100,11 @@ section {
 // list
 ul {
 	list-style-type: none;
-	margin: 2rem 0;
+	margin: 0;
 	padding: 0;
 	li {
-		padding-left: 1rem;
+        padding-left: 0;
+        padding-right: 1rem;
 	}
 }
 
@@ -149,9 +155,10 @@ footer {
 	}
 }
 blockquote {
-	margin-left: 3rem;
+	margin-left: 1rem;
 	padding: 5px;
 	border-left: 3px inset @palette4;
+    background-color: rgba(255, 230, 54,.2);
 }
 
 dd {
@@ -252,8 +259,9 @@ aside.sidemenu {
 .container {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 90%;
+	max-width: 80%;
 	margin: 0 auto;
+    background-image: url(../img/Paper2.jpg);
 }
 .high {
         height: 75vh;
@@ -294,16 +302,23 @@ aside.sidemenu {
 .main-content {
    flex: 3;
    height: auto;
+   display: flex;
+   flex-direction: column;
+   padding: 0 1rem;
 }
 .box-right {
    // background-color: @palette4;
+   box-sizing: border-box;
    flex: 1;
-   border: 1px solid #250000;
+   padding: 0 1rem;
    h1 {
     color: @vintage5;
    }
-   p.sidenotes {
+   .sidenotes {
     font-size: .85em;
+    li {
+        margin: 3px 10px;
+        }
     }
    h2,h3,h4 {
     margin-left:.5rem;
@@ -315,9 +330,10 @@ aside.sidemenu {
     br {
         margin: 3px 0;
     }
- }
-.flex-three {
-
+}
+.box-right p:first-of-type::first-letter {
+    font-size: 1.25rem;
+    margin: 0;
 }
 .flex-four {
 	flex-direction: column;
@@ -435,52 +451,7 @@ table {
     margin: 0 auto;
 }
 
- @media screen and (max-width: 810px) {
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .box-left {
-            order: 1;
-            flex-direction: column;
-            flex: 1 1 100%;
-        }
-        .box2-left {
-            order: 4;
-            flex-direction: column;
-            flex: 1 1 100%;
-        }
-        .main-content {
-            order: 2;
-            flex-direction: column;
-            flex: 1 1 100%;
-        }
-        .box-right {
-            order: 3;
-            flex-direction: column;
-            flex: 1 1 100%;
-        }
-        .bottom {
-            display: none;
-        }
-        .flex-four {
-        	display: none;
-        }
-        header h1 {
-            display:none;
-            font-size: 2rem;
-            text-align: left;
-        }
-        .container-top {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 90%;
-        margin: 0 auto;
-    }
-    #top {
-        display: none;
-    }
- }
+
 /*
 --------------------------------------------------------------------Calendar
  */
@@ -525,9 +496,9 @@ th {
     font-size: 120%;
 }
 nav {
-    background-color: black;
+    background-color: transparent;
     width: 100%;
-    height: 50px;
+    height: 53px;
 }
 nav li {
     display: inline;

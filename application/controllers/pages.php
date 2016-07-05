@@ -197,6 +197,20 @@ class Pages extends CI_Controller {
     public function military()
     {
         $data['title'] = "Military Service";
+        $query = $this->db->select("name,military,war,country")->from("military")->get();
+        if ($query->result()) {
+            $data['army'] = $query->result();
+        }
+        $this->table->set_heading('Name', 'Military', 'War', 'Country');
+        $tmpl = array (
+            'table_open' => '<table class="pure-table pure-table-bordered">',
+            'heading_row_start'   => '<tr>',
+            'heading_row_end'     => '</tr>',
+            'heading_cell_start'  => '<th>',
+            'heading_cell_end'    => '</th>',
+            'table_close'         => '</table>'
+            );
+        $this->table->set_template($tmpl);
         $this->load->view("pages/military", $data);
     }
 

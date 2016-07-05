@@ -3,9 +3,6 @@
 @import url("../../bower_components/hover/css/hover.css");
 @import url("../../bower_components/font-awesome/css/font-awesome.css");
 /* Forms reference http://purecss.io/forms/ */
-html {
-  box-sizing: border-box;
-}
 body,
 html {
   height: 100vh;
@@ -14,18 +11,25 @@ html {
   background-color: #F0C75E;
   background-blend-mode: difference;
   font-family: georgia;
-  line-height: 1.5;
+  line-height: 1.618;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   transition: all 300ms ease;
   overflow: auto;
+  box-sizing: border-box;
 }
 header {
   width: 100%;
   min-height: 100px !important;
 }
 header h1 {
+  font-family: 'soriasoria';
+  font-size: 4.5rem;
+  margin: 0;
+  width: 100%;
+  color: Pantone #de007d;
+  text-shadow: 1px 1px 3px Tomato, -1px -1px 3px #000066;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -37,12 +41,6 @@ header h1 {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: 'soriasoria';
-  font-size: 4.5rem;
-  margin: 0;
-  width: 100%;
-  color: Pantone #de007d;
-  text-shadow: 1px 1px 3px Tomato, -1px -1px 3px #000066;
 }
 section > h1 {
   margin-left: .5em;
@@ -90,6 +88,11 @@ article legend {
 article fieldset {
   border: 2px solid brown;
 }
+article p:first-of-type::first-letter {
+  font-size: 3em;
+  margin: 10px 5px 0 5px;
+  line-height: 1;
+}
 article:last-of-type {
   box-shadow: none;
 }
@@ -98,11 +101,12 @@ section {
 }
 ul {
   list-style-type: none;
-  margin: 2rem 0;
+  margin: 0;
   padding: 0;
 }
 ul li {
-  padding-left: 1rem;
+  padding-left: 0;
+  padding-right: 1rem;
 }
 article h2 {
   width: 100%;
@@ -149,9 +153,10 @@ footer h3 {
   margin: 0 2em;
 }
 blockquote {
-  margin-left: 3rem;
+  margin-left: 1rem;
   padding: 5px;
   border-left: 3px inset #f67280;
+  background-color: rgba(255, 230, 54, 0.2);
 }
 dd {
   margin: 3px 2em;
@@ -261,8 +266,9 @@ aside.sidemenu a:visited {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
+  background-image: url(../img/Paper2.jpg);
 }
 .high {
   height: 75vh;
@@ -308,18 +314,29 @@ aside.sidemenu a:visited {
       -ms-flex: 3;
           flex: 3;
   height: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 1rem;
 }
 .box-right {
+  box-sizing: border-box;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border: 1px solid #250000;
+  padding: 0 1rem;
 }
 .box-right h1 {
   color: #726255;
 }
-.box-right p.sidenotes {
+.box-right .sidenotes {
   font-size: .85em;
+}
+.box-right .sidenotes li {
+  margin: 3px 10px;
 }
 .box-right h2,
 .box-right h3,
@@ -332,6 +349,10 @@ aside.sidemenu a:visited {
 }
 .box-right br {
   margin: 3px 0;
+}
+.box-right p:first-of-type::first-letter {
+  font-size: 1.25rem;
+  margin: 0;
 }
 .flex-four {
   -webkit-flex-direction: column;
@@ -474,84 +495,6 @@ table {
   width: 80%;
   margin: 0 auto;
 }
-@media screen and (max-width: 810px) {
-  .container {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-  }
-  .box-left {
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-flex: 1 1 100%;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-  .box2-left {
-    -webkit-order: 4;
-        -ms-flex-order: 4;
-            order: 4;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-flex: 1 1 100%;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-  .main-content {
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-flex: 1 1 100%;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-  .box-right {
-    -webkit-order: 3;
-        -ms-flex-order: 3;
-            order: 3;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-flex: 1 1 100%;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-  .bottom {
-    display: none;
-  }
-  .flex-four {
-    display: none;
-  }
-  header h1 {
-    display: none;
-    font-size: 2rem;
-    text-align: left;
-  }
-  .container-top {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  #top {
-    display: none;
-  }
-}
 /*
 --------------------------------------------------------------------Calendar
  */
@@ -594,9 +537,9 @@ th {
   font-size: 120%;
 }
 nav {
-  background-color: black;
+  background-color: transparent;
   width: 100%;
-  height: 50px;
+  height: 53px;
 }
 nav li {
   display: inline;

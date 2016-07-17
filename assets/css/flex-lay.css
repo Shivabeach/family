@@ -1,5 +1,6 @@
 @import url("typo-dist.css");
 @import url("fonts-dist.css");
+@import url("media-dist.css");
 @import url("../../bower_components/hover/css/hover.css");
 @import url("../../bower_components/font-awesome/css/font-awesome.css");
 /* Forms reference http://purecss.io/forms/ */
@@ -8,8 +9,8 @@ html {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-image: url('../img/White_Paper.jpg');
   background-color: #F0C75E;
-  background-blend-mode: difference;
   font-family: georgia;
   line-height: 1.618;
   -moz-osx-font-smoothing: grayscale;
@@ -268,7 +269,6 @@ aside.sidemenu a:visited {
           flex-wrap: wrap;
   max-width: 80%;
   margin: 0 auto;
-  background-image: url(../img/Paper2.jpg);
 }
 .high {
   height: 75vh;

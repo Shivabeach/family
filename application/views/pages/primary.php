@@ -33,7 +33,7 @@
 	                <?php echo "<h2> $row->title</h2>";?>
 	                <?php echo $this->typography->auto_typography($row->content);?>
 	                <p class="end">Created <?php echo $row->date;?></p>
-        </article>
+                </article>
         	<?php endforeach;?>
 		</div>
     <div class="box-right">

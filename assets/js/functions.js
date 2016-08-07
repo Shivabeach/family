@@ -1,5 +1,3 @@
-/*global $:false,
-window:false */
 /* beautify then minify */
 
 $(document).ajaxError(function (e, xhr, settings, error) {
@@ -152,7 +150,7 @@ $(function () {
 
   $(function() {
     "use strict";
-    $("dd.tool").tooltip();
+    $(".tool").tooltip();
   });
 
   $(function () {
@@ -277,6 +275,10 @@ $(function () {
 
 $(function () {
     'use strict';
+    jQuery.validator.setDefaults({
+      debug: true,
+      success: "valid"
+    });
     $(".check").validate({
         rules:{
             man: {
@@ -307,8 +309,13 @@ $(function () {
                 required: true
             },
             relation: {
-                maxlength: 50,
-                minlength: 15
+                required: true
+            },
+            family2: {
+                required: true
+            },
+            male: {
+                required: true
             }
         },
         messages: {
@@ -331,14 +338,19 @@ $(function () {
             kids: {
                 required: "Field required",
                 digit: "Gotta be numbers",
-                maxlength: "Post too long",
+                maxlength: "Post too long"
             },
             family: {
                 required: "This field required"
             },
             relation: {
-                maxlength: "Seems a bit long eh?",
-                minlength: "a bit short today?"
+                required: "This field required"
+            },
+            family2: {
+                required: "This field required"
+            },
+            male: {
+                required: "This field required"
             }
         }
     });

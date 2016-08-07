@@ -14,16 +14,15 @@
     <ul>
     <?php
         // script on http://stackoverflow.com/questions/13637145/split-text-string-into-first-and-last-name-in-php
-        foreach($testor as $row):?>
-          <?php
-            $male = trim($row->male);
-            $parts = explode(" ", $male);
-            $lastname = array_pop($parts);
-            $firstname = implode(" ", $parts);
-            echo "<li> $lastname </li>";
+        foreach($testor as $row){
 
-          ?>
-      <?php endforeach;?>
+            $this->table->add_row(
+                $row->male,
+                $row->family2
+                 );
+        }
+echo $this->table->generate();
+     ?>
     </ul>
     </div>
 </div>

@@ -1,5 +1,4 @@
 /* beautify then minify */
-
 $(document).ajaxError(function (e, xhr, settings, error) {
     "use strict";
   console.log(error);

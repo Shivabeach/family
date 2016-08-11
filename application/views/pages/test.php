@@ -25,6 +25,20 @@ echo $this->table->generate();
      ?>
     </ul>
     </div>
+    <div class="box-right">
+    <h3>Bower</h3>
+    <p>
+    Chocolat is a responsive jQuery lightbox plugin What you are looking for is in the /dist/ folder.<br>
+    <a href="https://github.com/nicolas-t/Chocolat">Chocolat</a>
+    </p>
+    <p>
+        Echo is a standalone JavaScript lazy-loading image micro-library. Echo is fast, 2KB, and uses HTML5 data-* attributes for simple. Check out a [demo](http://toddmotto.com/labs/echo). Echo works in IE8+.
+    </p>
+    <p>
+    Font Awesome is a full suite of 634 pictographic icons for easy scalable vector graphics on websites, created and maintained by Dave Gandy. Stay up to date with the latest release and announcements on Twitter: @fontawesome.<br>
+    Get started at http://fontawesome.io!
+    </p>
+    </div>
 </div>
 
 </body>

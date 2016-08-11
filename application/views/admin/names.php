@@ -12,7 +12,7 @@
     <article class="form">
         <h3>Full names and familys</h3>
         <fieldset>
-            <legend>Full On Everything</legend>
+            <legend>Fill The Form</legend>
         <?php
             $attr = [
             "id"    => "ajax",

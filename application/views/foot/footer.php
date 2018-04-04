@@ -10,7 +10,7 @@
   // Original PHP code by Chirp Internet: www.chirp.com.au
     $input = "P6HBAJ4Zk272SiMU^W/%g^4c8";
     $options = [
-     'cost' => 12
+     'cost' => 7
     ];
     echo password_hash($input, PASSWORD_BCRYPT, $options);
   ?>

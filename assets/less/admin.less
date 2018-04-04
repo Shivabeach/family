@@ -1,37 +1,44 @@
-@import (less) url("colors.less");
-@import (css) url("../../bower_components/normalize.css/normalize.min.css");
+@import (less) url('colors.less');
+@import (css) url('../../bower_components/normalize.css/normalize.min.css');
 
-.container {
-	width: 80%;
-	margin: 0 auto;
+.container
+{
+    width: 80%;
+    margin: 0 auto;
 }
-article {
-	width: 100%;
+article
+{
+    width: 100%;
 }
-	.leftbox {
-		width: 70%;
-		color: inherit;
-		float: left;
-	}
-	.leftbox {
-		float: left;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		margin-bottom: 20px;
-	}
-.rightbox {
-	width: 30%;
-	float: left;
+.leftbox
+{
+    float: left;
+    width: 70%;
+    color: inherit;
 }
-.rightbox li {
-	background-color: @lightprimary;
-	color: contrast(@lightprimary);
-	text-indent: 1em;
-	list-style-type: none;
-	border-radius: 5px;
+.leftbox
+{
+    float: left;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-bottom: 20px;
 }
-.rightbox ul {
-	padding-right: 20px;
-	border-radius: 5px;
+.rightbox
+{
+    float: left;
+    width: 30%;
+}
+.rightbox li
+{
+    list-style-type: none;
+    text-indent: 1em;
+    color: contrast(@lightprimary);
+    border-radius: 5px;
+    background-color: @lightprimary;
+}
+.rightbox ul
+{
+    padding-right: 20px;
+    border-radius: 5px;
 }

@@ -4,6 +4,10 @@ $(document).ajaxError(function (e, xhr, settings, error) {
   console.log(error);
 });
 
+$('#male').on('change',function(){
+    $('#ajax').trigger('submit');
+});
+
   $(function() {
      "use strict";
     $( ".dialog" ).dialog({
@@ -185,6 +189,7 @@ $(window).on('scroll', function(){
         }
     });
   });
+
 // controller ajaxpages - page datapages
 $(function() {
     "use strict";
@@ -354,5 +359,24 @@ $(function () {
         }
     });
 });
-//$(function(){ $(document).on("contextmenu",function(e){ e.preventDefault(); }); });
 
+$(function () {
+    $("#font-button").on("click",function(){
+        var button = $(this);
+        var contentDiv= $("#comment");
+
+        if(button.val() == "Bold"){
+
+        contentDiv.css("font-weight","bold");
+        button.val("UnBold");
+
+        }else{
+            contentDiv.css("font-weight","normal");
+            button.val("Bold");
+            }
+    });​
+});
+
+$(".boldtrigger").click(function() { //boldTrigger being the element initiating the trigger
+    $(".text").toggleClass("bold");  //text being the element to where applied to it.
+});

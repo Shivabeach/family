@@ -15,10 +15,10 @@
       </p>
       <ul>
     <?php
-      foreach($folks as $row)
+      foreach($folks as $row) //from pages bosnames
       {
-        echo "<li class='inliner' title='Click Me'> trim($row->male) </li>";
-        echo "<li class='inliner' title='Click Me'> trim($row->female) </li>";
+        echo "<li class='inliner' title='Click Me'> $row->male </li>";
+        echo "<li class='inliner' title='Click Me'> $row->female </li>";
        }
     ?>
       </ul>

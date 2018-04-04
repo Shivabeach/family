@@ -13,9 +13,6 @@
         <h3>create a search engine for these names and the family they are from</h3>
 
     </article>
-
-
-
     <article id="tabs">
       <ul>
         <li><a href="#tabs-1" name="panel-1">VanHorns</a></li>
@@ -23,17 +20,15 @@
         <li><a href="#tabs-3" name="panel-3">Reeds</a></li>
         <li><a href="#tabs-4" name="panel-4">Bosticks</a></li>
       </ul>
-      
-
    <article id="tabs-1">
     <h3>VanHorn</h3>
-    <ul>
+    <ul> 
       <?php 
       foreach($folks as $row):?>
           <li class="inliner"><?php echo $row->name, nbs(2) ;?></li>
           
       <?php endforeach;?>
-      ?>
+      
       </ul>
     </article>
     <article id="tabs-2">

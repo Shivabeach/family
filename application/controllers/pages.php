@@ -5,15 +5,14 @@ class Pages extends CI_Controller {
     public function __construct()
        {
             parent::__construct();
-            $this->load->database();
+            $this->load->model("get_data");
         }
-/**
+/** 
  * gets data for the main page
  * @return string [description]
  */
     public function index()
     {
-        $this->load->model("get_data");
         $data["results"] = $this->get_data->getdata("vanhorn");
         $data1['title'] = "Main Page";
         $this->load->view('head/headfam',$data1);

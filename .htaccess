@@ -40,13 +40,13 @@ RewriteRule "(^|/)\." - [F]
     Header set X-Content-Type-Options "nosniff"
 </IfModule>
 
-<IfModule mod_headers.c>
+#IfModule mod_headers.c>
      #                           (1)    (2)
-     Header set X-XSS-Protection "1; mode=block"
-     <FilesMatch "\.(appcache|atom|crx|css|cur|eot|f4[abpv]|flv|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|tt[cf]|vcf|vtt|webapp|web[mp]|woff|xml|xpi)$">
-         Header unset X-XSS-Protection
-     </FilesMatch>
- </IfModule>
+    #Header set X-XSS-Protection "1; mode=block"
+    #<FilesMatch "\.(appcache|atom|crx|css|cur|eot|f4[abpv]|flv|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|tt[cf]|vcf|vtt|webapp|web[mp]|woff|xml|xpi)$">
+    #    Header unset X-XSS-Protection
+     #FilesMatch>
+ #/IfModule>
 
  # ------------------------------------------------------------------------------
 # | Compression                                                                |

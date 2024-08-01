@@ -3,10 +3,6 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Pages extends CI_Controller {
                 
-/** 
- * gets data for the main page
- * @return string [description]
- */
     public function index()
     {
         $data["results"] = $this->get_data->get("vanhorn");
@@ -15,7 +11,6 @@ class Pages extends CI_Controller {
         $this->load->view('include/nav2');
         $this->load->view("pages/primary",$data);
         $this->load->view("foot/footer");
-
     }
 
     public function fam()

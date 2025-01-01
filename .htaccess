@@ -32,18 +32,6 @@ Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 #
 <FilesMatch "(^#.*#|\.(bak|config|dist|fla|in[ci]|log|psd|sh|sql|sw[op])|~)$">
 #
-    # Apache < 2.3
-    <IfModule !mod_authz_core.c>
-        Order allow,deny
-        Deny from all
-        Satisfy All
-    </IfModule>
-
-    # Apache ≥ 2.3
-    <IfModule mod_authz_core.c>
-        Require all denied
-    </IfModule>
-
 </FilesMatch>
 #
 <IfModule mod_headers.c>
@@ -92,7 +80,8 @@ Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
           text/html \
           text/plain \
           text/x-component \
-          text/xml
+          text/xml \
+          text/javascript
     </IfModule>
 
 </IfModule>

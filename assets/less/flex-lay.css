@@ -2,10 +2,7 @@
 @import url("typo-dist.css");
 @import url("fonts-dist.css");
 @import url("media-dist.css");
-/*
-@import url("../../bower_components/hover/css/hover.css");
-@import url("../../bower_components/font-awesome/css/font-awesome.css");
-*/
+
 /* Forms reference http://purecss.io/forms/ */
 body,
 html {

@@ -23,12 +23,12 @@
     </div>
 </footer>
 </div>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
 <!--    <script src="<?php echo base_url('bower_components/timeago/jquery.timeago.js');?>"></script>-->
 
 <script src="<?php echo base_url('assets/js/functions.min.js');?>"></script>
 <script src="<?php echo base_url('assets/js/main.js');?>"></script>
-<script src="<?php echo base_url('bower_components/superfish/dist/js/superfish.js');?>"></script>
+
 <script src="superfish.js"></script>
 <script>
 	jQuery(document).ready(function() {

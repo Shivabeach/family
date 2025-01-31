@@ -14,12 +14,6 @@
     ];
     echo password_hash($input, PASSWORD_BCRYPT, $options);
   ?>
-        <br>
-        <?php 
-  echo "Random String";
-  echo nbs(3);
-  echo random_string('alnum', 16);?>
-
     </div>
 </footer>
 </div>
@@ -29,7 +23,7 @@
 <script src="<?php echo base_url('assets/js/functions.min.js');?>"></script>
 <script src="<?php echo base_url('assets/js/main.js');?>"></script>
 
-<script src="superfish.js"></script>
+<script type="text/javascript" src="superfish.js"></script>
 <script>
 	jQuery(document).ready(function() {
 		jQuery('ul.sf-menu').superfish();

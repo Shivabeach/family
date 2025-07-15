@@ -11,7 +11,7 @@
 	<section id="cd-timeline">
 	<div class="cd-timeline-block">
 		<div class="cd-timeline-img">
-			<img src="../assets/img/cd-icon-picture.svg" alt="Picture">
+			<img src="<?php echo base_url('assets/img/cd-icon-picture.svg');?>">
 		</div> <!-- cd-timeline-img -->
  
 		<div class="cd-timeline-content">

@@ -1,3 +1,4 @@
+
 /* beautify then minify */
 $(document).ajaxError(function (e, xhr, settings, error) {
     "use strict";
@@ -8,57 +9,57 @@ $('#male').on('change',function(){
     $('#ajax').trigger('submit');
 });
 
-  $(function() {
-     "use strict";
-    $( ".dialog" ).dialog({
-        maxWidth: 1000,
-        width: 800,
-        modal: true,
-        autoOpen: false
-    });
-    $( ".opener" ).click(function() {
-       $( ".dialog" ).dialog( "open" );
-    });
-  });
+  // $(function() {
+  //    "use strict";
+  //   $( ".dialog" ).dialog({
+  //       maxWidth: 1000,
+  //       width: 800,
+  //       modal: true,
+  //       autoOpen: false
+  //   });
+  //   $( ".opener" ).click(function() {
+  //      $( ".dialog" ).dialog( "open" );
+  //   });
+  // });
 
-  $(function() {
-     "use strict";
-    $( ".dialog1" ).dialog({
-        maxWidth: 500,
-        minHeight: 300,
-        modal: true,
-        autoOpen: false
-    });
-    $( ".opener1" ).click(function() {
-       $( ".dialog1" ).dialog( "open" );
-    });
-  });
+  // $(function() {
+  //    "use strict";
+  //   $( ".dialog1" ).dialog({
+  //       maxWidth: 500,
+  //       minHeight: 300,
+  //       modal: true,
+  //       autoOpen: false
+  //   });
+  //   $( ".opener1" ).click(function() {
+  //      $( ".dialog1" ).dialog( "open" );
+  //   });
+  // });
 
-  $(function() {
-     "use strict";
-    $( ".dialog2" ).dialog({
-        maxWidth: 500,
-        minHeight: 300,
-        modal: true,
-        autoOpen: false
-    });
-    $( ".opener2" ).click(function() {
-       $( ".dialog2" ).dialog( "open" );
-    });
-  });
+//   $(function() {
+//      "use strict";
+//     $( ".dialog2" ).dialog({
+//         maxWidth: 500,
+//         minHeight: 300,
+//         modal: true,
+//         autoOpen: false
+//     });
+//     $( ".opener2" ).click(function() {
+//        $( ".dialog2" ).dialog( "open" );
+//     });
+//   });
 
-  $(function() {
-     "use strict";
-    $( ".dialog3" ).dialog({
-        minHeight: 300,
-        maxWidth: 500,
-        modal: true,
-        autoOpen: false
-    });
-    $( ".opener3" ).click(function() {
-       $( ".dialog3" ).dialog( "open" );
-    });
-});
+//   $(function() {
+//      "use strict";
+//     $( ".dialog3" ).dialog({
+//         minHeight: 300,
+//         maxWidth: 500,
+//         modal: true,
+//         autoOpen: false
+//     });
+//     $( ".opener3" ).click(function() {
+//        $( ".dialog3" ).dialog( "open" );
+//     });
+// });
 $(function () {
     "use strict";
     $('form#ajax').on('submit', function () {
@@ -151,19 +152,19 @@ $(function () {
   });
 });
 
-  $(function() {
-    "use strict";
-    $(".tool").tooltip();
-  });
+  // $(function() {
+  //   "use strict";
+  //   $(".tool").tooltip();
+  // });
 
-  $(function () {
-    "use strict";
-    $("#tabs").tabs( {
-        active: 0,
-        heightStyle: "auto",
-        event: "mouseover"
-    });
-  });
+  // $(function () {
+  //   "use strict";
+  //   $("#tabs").tabs( {
+  //       active: 0,
+  //       heightStyle: "auto",
+  //       event: "mouseover"
+  //   });
+  // });
 
   for (var i = 0; i < document.links.length; i++) {/*this highlights the current active link*/
     if (document.links[i].href == document.URL) {
@@ -277,88 +278,88 @@ $(function () {
     $("tr.stripes:odd").addClass("stripe1");
 });
 
-$(function () {
-    'use strict';
-    jQuery.validator.setDefaults({
-      debug: true,
-      success: "valid"
-    });
-    $(".check").validate({
-        rules:{
-            man: {
-                required: true,
-                minlength: 5
-            },
-            woman: {
-                required: true,
-                minlength: 3
-            },
-            year: {
-                required: true,
-                digit: true,
-                maxlength: 4,
-                minlength: 4
-            },
-            state: {
-                required: true,
-                maxlength: 15
-            },
-            kids: {
-                required: true,
-                digit: true,
-                maxlength: 2,
-                minlength: 1
-            },
-            family: {
-                required: true
-            },
-            relation: {
-                required: true
-            },
-            family2: {
-                required: true
-            },
-            male: {
-                required: true
-            }
-        },
-        messages: {
-            man: {
-                required: "Field Required",
-                minlength: "5 of them please"
-            },
-            woman: {
-                required: "Field Required",
-                minlength: "5 of them please"
-            },
-            year: {
-                required: "Field required",
-                digit: "Digits only"
-            },
-            state: {
-                required: "Field required",
-                maxlength: "Answer too long"
-            },
-            kids: {
-                required: "Field required",
-                digit: "Gotta be numbers",
-                maxlength: "Post too long"
-            },
-            family: {
-                required: "This field required"
-            },
-            relation: {
-                required: "This field required"
-            },
-            family2: {
-                required: "This field required"
-            },
-            male: {
-                required: "This field required"
-            }
-        }
-    });
-});
+// $(function () {
+//     'use strict';
+//     jQuery.validator.setDefaults({
+//       debug: true,
+//       success: "valid"
+//     });
+//     $(".check").validate({
+//         rules:{
+//             man: {
+//                 required: true,
+//                 minlength: 5
+//             },
+//             woman: {
+//                 required: true,
+//                 minlength: 3
+//             },
+//             year: {
+//                 required: true,
+//                 digit: true,
+//                 maxlength: 4,
+//                 minlength: 4
+//             },
+//             state: {
+//                 required: true,
+//                 maxlength: 15
+//             },
+//             kids: {
+//                 required: true,
+//                 digit: true,
+//                 maxlength: 2,
+//                 minlength: 1
+//             },
+//             family: {
+//                 required: true
+//             },
+//             relation: {
+//                 required: true
+//             },
+//             family2: {
+//                 required: true
+//             },
+//             male: {
+//                 required: true
+//             }
+//         },
+//         messages: {
+//             man: {
+//                 required: "Field Required",
+//                 minlength: "5 of them please"
+//             },
+//             woman: {
+//                 required: "Field Required",
+//                 minlength: "5 of them please"
+//             },
+//             year: {
+//                 required: "Field required",
+//                 digit: "Digits only"
+//             },
+//             state: {
+//                 required: "Field required",
+//                 maxlength: "Answer too long"
+//             },
+//             kids: {
+//                 required: "Field required",
+//                 digit: "Gotta be numbers",
+//                 maxlength: "Post too long"
+//             },
+//             family: {
+//                 required: "This field required"
+//             },
+//             relation: {
+//                 required: "This field required"
+//             },
+//             family2: {
+//                 required: "This field required"
+//             },
+//             male: {
+//                 required: "This field required"
+//             }
+//         }
+//     });
+// });
 
 $(function () {
     $("#font-button").on("click",function(){
@@ -374,7 +375,7 @@ $(function () {
             contentDiv.css("font-weight","normal");
             button.val("Bold");
             }
-    });​
+    });
 });
 
 $(".boldtrigger").click(function() { //boldTrigger being the element initiating the trigger
